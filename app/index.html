@@ -1,14 +1,178 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Фрешок | Онлайн-маркет</title>
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
-	
+	<header class="header">
+		<div class="header__top">
+			<div class="container">
+				<div class="header__inner">
+
+					<ul class="header__comm">
+						<li class="header__comm-item header__comm-item--car">
+							<a class="header__comm-link" href="">АДРЕС И ВРЕМЯ ДОСТАВКИ</a>
+						</li>
+
+						<li class="header__comm-item header__comm-item--phone">
+							<a class="header__comm-link" href="">ГОРЯЧАЯ ЛИНИЯ 24/7</a>
+						</li>
+					</ul>
+
+					<div class="header__info benefits">
+						<ul class="benefits__list">
+							<li class="benefits__item">
+								<a class="benefits__link" href="">ДОСТАВКА</a>
+							</li>
+
+							<li class="benefits__item">
+								<a class="benefits__link" href="">О НАС</a>
+							</li>
+
+							<li class="benefits__item">
+								<a class="benefits__link" href="">НОВОСТИ</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<nav class="header__menu">
+			<div class="container">
+				<div class="header__content">
+					<div class="header__logo logo">
+						<a class="logo__link" href="#">
+							<img class="logo__img" src="images/logo.svg" alt="Логотип Фрешок">
+						</a>
+					</div>
+
+					<button class="header__dropdown">
+						<span class="header__dropdown-line"></span>
+						<span class="header__caralog catalog">Каталог продуктов</span>
+					</button>
+
+					<!-- <ul class="header__list">
+								<li class="header__item">
+									<span class="header__product">Овощи и фрукты</span>
+								</li>
+								<li class="header__item">
+									<span class="header__product">Бакалея</span>
+								</li>
+								<li class="header__item">
+									<span class="header__product">Молочные продукты</span>
+								</li>
+								<li class="header__item">
+									<span class="header__product">Хлеб</span>
+								</li>
+								<li class="header__item">
+									<span class="header__product">Мясо</span>
+								</li>
+								<li class="header__item">
+									<span class="header__product">Колбаса</span>
+								</li>
+								<li class="header__item">
+									<span class="header__product">Рыба</span>
+								</li>
+								<li class="header__item">
+									<span class="header__product">Алкоголь</span>
+								</li>
+								<li class="header__item">
+									<span class="header__product">Напитки</span>
+								</li>
+								<li class="header__item">
+									<span class="header__product">Торты</span>
+								</li>
+								<li class="header__item">
+									<span class="header__product">Мясо</span>
+								</li>
+								<li class="header__item">
+									<span class="header__product">Чай, кофе</span>
+								</li>
+							</ul> -->
+
+
+					<form class="header__form">
+						<input class="header__search" placeholder="Найти в магазине ..." type="search" name="search"
+							id="search" required>
+						<button class="header__form-btn" type="submit">Поиск</button>
+					</form>
+
+					<ul class="header-nav">
+						<li class="header-nav__item header-nav__item--user">
+							<a class="header-nav__link" href="#">
+								<span class="sr-only">Аккаунт</span>
+							</a>
+						</li>
+
+						<li class="header-nav__item header-nav__item--heart">
+							<a class="header-nav__link" href="#">
+								<span class="sr-only">Избранное</span>
+								<span class="header-nav__num">3</span>
+							</a>
+						</li>
+
+						<li class="header-nav__item header-nav__item--cart">
+							<a class="header-nav__link" href="#">
+								<span class="sr-only">Корзина</span>
+								<span class="header-nav__num">3</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="header__background slider">
+			<ul class="slider__list">
+				<li class="slider__item" style="background-image: url('images/bg-slider1.png');">
+					<div class="container">
+						<div class="slider__inner">
+							<h1 class="slider__title">СВЕЖАЧОК ВАМ в ХАТУ</h1>
+							<span class="slider__subtitle">Скидка -50%</span>
+							<span class="slider__text">Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%.
+								Торопитесь!</span>
+							<a class="slider__link" href="">Купить сейчас</a>
+						</div>
+					</div>
+				</li>
+
+				<li class="slider__item" style="background-image: url('images/bg-slider2.png');">
+					<div class="container">
+						<div class="slider__inner">
+							<h1 class="slider__title">НАКРУТИ СЕБЕ ТОМАТОВ</h1>
+							<span class="slider__subtitle">АКЦИЯ: 3 кг по цене 1</span>
+							<span class="slider__text">Только с 12 по 15 июля скидка на домашние помидорчики</span>
+							<a class="slider__link" href="">Купить сейчас</a>
+						</div>
+					</div>
+				</li>
+
+				<li class="slider__item" style="background-image: url('images/bg-slider3.png');">
+					<div class="container">
+						<div class="slider__inner">
+							<h1 class="slider__title">Пусть остальные позеленеют от зависти</h1>
+							<span class="slider__subtitle">Распродажа зелени</span>
+							<a class="slider__link" href="">Купить сейчас</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</header>
+
+
+
+
+
 	<script src="js/main.min.js"></script>
+	<script src="js/slick.min.js"></script>
 </body>
+
 </html>
