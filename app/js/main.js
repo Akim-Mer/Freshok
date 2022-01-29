@@ -3,3 +3,7 @@ $(document).ready(function(){
 	arrows: true,
   });
 });
+
+$(function(){
+	var mixer = mixitup('.products__list');
+});
