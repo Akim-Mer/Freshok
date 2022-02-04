@@ -1,0 +1,202 @@
+.footer {
+	background-color: $dark-800;
+	color: $white;
+	font-size: 14px;
+	line-height: 1.4;
+	padding: 30px 0 24px;
+
+	
+	&__logo {
+		margin-bottom: 30px;
+	}
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 68px;
+		
+	}
+
+
+	&__list {
+		column-count: 3;
+		column-gap: 75px;
+		// margin-right: 0px;
+	}
+
+	&__item {
+		display: block;
+		margin-bottom: 18px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		// border: 2px solid black;
+	}
+
+
+	&__link {
+		outline: none;
+	}
+
+	&__info{
+		display: flex;
+		flex-direction: column;
+	}
+
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__copy {
+		align-self: center;
+	}
+
+	&__bottom-list {
+		display: flex;
+		
+	}
+
+	&__bottom-item {
+		margin-right: 24px;
+		
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+
+	
+}
+
+
+.form-subscribe {
+	margin-right:  90px;
+
+	&__label {
+		margin-bottom: 14px;
+	}
+
+	&__input {
+		display: flex;
+
+	}
+
+	&__email {
+		background-color: $white;
+		padding-left: 12px;
+		border-radius: 6px 0 0 6px;
+	}
+
+	&__btn {
+		background-color: $green-900;
+		color: $white;
+		font-weight: 700;
+		font-size: 12px;
+		line-height: 16px;
+		text-transform: uppercase;
+		padding: 12px 16px;
+		border-radius: 0 6px 6px 0;
+
+		&:hover{
+			background-color: #4D800C;
+		}
+
+		&:focus{
+			outline: 4px solid $green-200;
+			
+		}
+
+		&:active{
+			box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+			outline: transparent;
+			&::before{
+				background-color: $silver-600;;
+			}
+		}
+	}
+}
+
+
+.contacts {
+	
+
+	&__item {
+		margin-bottom: 18px;
+	}
+
+	&__link {}
+}
+
+
+.socials {
+	display: flex;
+	// justify-content: space-between;
+	&__item {
+		width: 32px;
+		// height: 32px;
+		// background-color: grey;
+		margin-right: 11.92px;
+		// outline: 2px solid black;
+		position: relative;
+	
+	}
+
+	&__link {
+		position: absolute;
+		display: block;
+		background-color: $white;
+		mask-repeat: no-repeat;
+		mask-size: contain;
+		mask-position: center;
+		width: 39.78px;
+		height: 35px;
+		top: -3px;
+		left: 6px;
+		border: 2px solid white;
+			
+
+		&:hover{
+			opacity: 0.7;
+		}	
+
+		&:focus{
+			box-shadow: 0px 0px 0px 3px rgba(255, 255, 255, 1);
+			border-radius: 3px;
+			// outline: 3px solid rgba(255, 255, 255, 1);
+		}
+		
+		&:active{
+			opacity: 1;
+		}	
+
+		&--facebook {
+			
+				mask-image: url("../../images/sprite.svg#icon-facebook");
+				
+			
+		}
+
+		&--youtube {
+			
+				mask-image: url("../../images/sprite.svg#icon-youtube");
+					
+			
+		}
+
+		&--telegram {
+			
+				mask-image: url("../../images/sprite.svg#icon-telegram");
+					
+			
+		}
+
+		&--instagram {
+			
+				mask-image: url("../../images/sprite.svg#icon-instagram");	
+			
+		}
+	}
+
+	
+}
