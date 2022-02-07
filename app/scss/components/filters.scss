@@ -1,0 +1,40 @@
+.filters {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 48px;
+
+	&__item {
+		&:not(:last-child) {
+			margin-right: 24px;
+		}
+	}
+
+	&__btn {
+		font-weight: 700;
+		font-size: 15px;
+		text-transform: uppercase;
+		color: $dark-500;
+		outline: transparent;
+		transition: color 0.3s;
+
+		&:hover {
+			color: $green-900;
+		}
+
+		&:focus {
+			color: $dark-500;
+			box-shadow: 0 0 0 3px $green-200;
+			border-radius: 4px;
+		}
+
+		&:active {
+			box-shadow: 0 3px 0 0 $green-200;
+			border-radius: 0;
+		}
+	}
+}
+
+.mixitup-control-active {
+	box-shadow: 0 3px 0 0 $green-200;
+	border-radius: 0;
+}

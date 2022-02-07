@@ -1,0 +1,162 @@
+.promo {
+	padding: 72px 0;
+	background-color: $silver-100;
+	text-align: center;
+
+	&__title {
+		margin-bottom: 42px;
+	}
+
+	&__list {
+		text-align: left;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 30px;
+		margin-bottom: 48px;
+	}
+
+	.product-card {
+		flex-direction: row;
+		padding: 12px;
+		max-height: 124px;
+		&__image-box {
+			max-width: 100px;
+			padding-bottom: 36.15%;
+			margin-right: 12px;
+			overflow-x: visible;
+
+			&::before {
+				width: 0;
+				height: 0;
+			}
+
+			&::after {
+				box-shadow: none;
+			}
+		}
+
+		&__info {
+			padding: 0;
+		}
+
+		&__name {
+			font-weight: 600;
+			font-size: 14px;
+			margin-bottom: 0;
+			@include line-clamp(3);
+		}
+
+		&__stock {
+			font-weight: 600;
+			font-size: 10px;
+			line-height: 2;
+			display: none;
+
+			&--pres {
+				display: block;
+				color: $green-900;
+			}
+
+			&--cls {
+				display: block;
+				color: $red-900;
+			}
+
+			&--not {
+				display: block;
+				color: $silver-600;
+			}
+		}
+
+		&__bottom {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.prices {
+			display: flex;
+			align-items: flex-end;
+			font-weight: 600;
+			font-size: 20px;
+			line-height: 1;
+			&__item {
+				margin-right: 12px;
+				&--old {
+					font-weight: 400;
+					font-size: 12px;
+				}
+			}
+
+			&__currency {
+				font-size: 14px;
+			}
+		}
+
+		&__rating {
+			font-weight: 700;
+			font-size: 14px;
+			line-height: 1;
+			padding-right: 18px;
+			position: relative;
+
+			&::after {
+				content: "";
+				position: absolute;
+				display: block;
+				background-color: $yellow-900;
+				mask-image: url("../../images/sprite.svg#icon-star");
+				mask-repeat: no-repeat;
+				mask-size: contain;
+				mask-position: center;
+				width: 21px;
+				height: 21px;
+				top: -6px;
+				right: -1.5px;
+			}
+		}
+	}
+
+	.filters {
+		margin-bottom: 56px;
+
+		&__item {
+			&:not(:last-child) {
+				margin-right: 30px;
+			}
+		}
+	}
+}
+
+.badges {
+	&--position {
+		position: absolute;
+	}
+}
+
+.price {
+	line-height: 1;
+
+	&__new {
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 1;
+		color: $dark-500;
+	}
+
+	&__old {
+		position: relative;
+		font-size: 12px;
+		color: $silver-600;
+
+		&::before {
+			content: "";
+			position: absolute;
+			border-bottom: 1px solid $silver-600;
+			position: absolute;
+			width: 100%;
+			height: 50%;
+			transform: rotate(344deg);
+			top: 0;
+		}
+	}
+}
