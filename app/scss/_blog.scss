@@ -7,11 +7,7 @@
 		margin-bottom: 30px;
 	}
 	&__title {
-		font-family: "Ruda";
-		font-style: normal;
-		font-weight: 600;
-		font-size: 32px;
-		line-height: 1.4;
+	margin-bottom: 0;
 	}
 	&__link {
 		font-style: normal;
@@ -20,16 +16,29 @@
 		line-height: 1.3;
 		color: $green-900;
 		position: relative;
-		&::after{
-			content: '';
-			position: absolute;
-			display: block;
-			max-width: 167px;
-			width: 100%;
-			height: 2px;
-			background-color: $green-900;
-			top: 19px;
+		border-bottom: 2px solid $green-900;
+		outline: none;
+		transition: color 0.3s;
+		margin-right: 6px;
+		&:hover {
+			color: #4D800C;
+			border-bottom: 2px solid #4D800C;
 		}
+
+		&:focus {
+			box-shadow: 0 0 0 3px $silver-100;
+			border-bottom: transparent;
+			border-radius: 3px;
+			color: $green-900;
+		}
+
+		&:active {
+			border-bottom: 2px solid $silver-100;
+			box-shadow: none;
+			border-radius: none;
+			color: $green-900;
+		}
+
 
 	}
 	&__info {
@@ -41,35 +50,42 @@
 		position: relative;
 		box-shadow:0 3px 3px rgba(0, 0, 0, 0.25);
 		border-radius: 6px;
-	}
-	&__link-item {
 		
+		&:focus-within {
+			outline: 2px solid $green-900;
+		}
 	}
+
+	&__link-item {
+		outline: transparent;
+	}
+
 	&__img {
 		border-radius: 6px 6px 0 0;
+		object-fit: cover;
 	}
 	&__date {
 		position: absolute;
+		top: 0;
+		left: 20px;
 		display: flex;
 		flex-direction: column;
 		text-align: center;
-		top: 0;
-		left: 20px;
 		background-color: $white;
 		padding: 18px 0 10px;
 		border-radius:0 0 4px 4px;
-		min-width: 65px;
+		width: 65px;
 	}
 	&__month {
 		font-weight: 700;
 		font-size: 12px;
 		line-height: 1.4;
-		letter-spacing: 0.1em;
+		letter-spacing: 0.001em;
 		margin-bottom: 4px;
 		display: block;
 	}
 	&__num {
-		font-family: "Ruda";
+		font-family: "Ruda", sans-serif;
 		font-weight: 600;
 		font-size: 30px;
 		line-height: 1;
@@ -80,7 +96,10 @@
 		font-weight: 600;
 		font-size: 16px;
 		line-height: 1.5;
+		letter-spacing: 0px;
 		transition: color 0.3s;
+		
+		@include line-clamp(4);
 		&:hover{
 			color: $green-900;
 		}

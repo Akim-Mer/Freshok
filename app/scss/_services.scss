@@ -1,0 +1,76 @@
+.services {
+	line-height: 1.4;
+	position: relative;
+
+	&__inner {
+		background-color: $silver-100;
+		padding: 48px 0 29px;
+	}
+	&__list {
+		display: flex;
+		justify-content: center;
+	}
+	&__item {
+		padding-left: 74px;
+		margin-right: 65px;
+		position: relative;
+		max-width: 264px;
+		width: 100%;
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&--scooter,
+		&--return,
+		&--hours {
+			&::before {
+				content: "";
+				display: block;
+				position: absolute;
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: center;
+				width: 50px;
+				height: 50px;
+			}
+		}
+
+		&--scooter {
+			&::before {
+				content: "";
+				background-image: url("../images/icons/icon-scooter.svg");
+				top: 0;
+				left: 0;
+			}
+		}
+
+		&--return {
+			&::before {
+				content: "";
+				background-image: url("../images/icons/icon-return-box.svg");
+				top: 0;
+				left: 0;
+			}
+		}
+
+		&--hours {
+			&::before {
+				content: "";
+				background-image: url("../images/icons/icon-24-hours.svg");
+				top: 0;
+				left: 0;
+			}
+		}
+	}
+
+	&__title {
+		font-weight: 600;
+		font-size: 16px;
+		margin-bottom: 6px;
+		letter-spacing: 0;
+	}
+	&__text {
+		font-size: 14px;
+		letter-spacing: 0;
+	}
+}

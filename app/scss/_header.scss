@@ -16,7 +16,6 @@
 
 	&__list {
 		display: flex;
-
 	}
 
 	&__item {
@@ -35,73 +34,63 @@
 			padding-left: 34px;
 		}
 
-	}
-
-	&__link {
-		transition: opacity 0.3s;
-
-		&:hover {
-			opacity: 0.7;
-		}
-
-		&:focus {
-			box-shadow: 0px 0px 0px 3px $white;
+		&:focus-within {
+			box-shadow: 0 0 0 3px $green-100;
 			border-radius: 4px;
 			opacity: 1;
 		}
 
 		&:active {
-			opacity: 1;
 			box-shadow: none;
 		}
+	}
+
+	&__link {
+		transition: opacity 0.3s;
+		outline: transparent;
 
 		&--delivery,
 		&--hotline {
 			position: relative;
-
 			&::before {
-				content: '';
+				content: "";
 				display: block;
 				position: absolute;
 				background-repeat: no-repeat;
 				background-size: cover;
 				background-position: center;
-				top: -7px;
+				top: -1px;
 			}
 		}
 
-
 		&--delivery {
 			&::before {
-				content: '';
-				width: 35px;
-				height: 27.96px;
+				content: "";
+				width: 32px;
+				height: 21.96px;
 				left: -45px;
-				background-color: $white;
-				mask-image: url('../../images/sprite.svg#icon-car'); // замените на своё изображение
-				mask-repeat: no-repeat;
-				mask-size: contain;
-				mask-position: center;
+				background-image: url("../images/icon-car.svg");
 			}
 		}
 
 		&--hotline {
 			&::before {
-				content: '';
-				width: 26px;
-				height: 29.96px;
+				content: "";
+				width: 22px;
+				height: 22px;
 				left: -35px;
-				background-color: $white;
-				mask-image: url('../../images/sprite.svg#icon-phone'); // замените на своё изображение
-				mask-repeat: no-repeat;
-				mask-size: contain;
-				mask-position: center;
+				background-image: url("../images/icon-phone.svg");
 			}
 		}
 
+		&:hover {
+			opacity: 0.7;
+		}
 
+		&:active {
+			opacity: 1;
+		}
 	}
-
 
 	&__bottom {
 		background-color: $green-900;
@@ -118,17 +107,13 @@
 	&__logo {
 		margin-right: 24px;
 	}
-
-	&__users {}
 }
 
 .dropdown {
 	margin-right: 30px;
-	max-width: 240px;
-	width: 100%;
 
 	&__btn {
-		padding: 15px 45px 15px 61px;
+		padding: 15px 38px 15px 61px;
 		background-color: $white;
 		color: $green-900;
 		font-weight: 600;
@@ -137,77 +122,48 @@
 		border-radius: 6px;
 		position: relative;
 		z-index: 2;
-		height: 50px;
-
-		&::before,
-		&::after {
-			content: '';
-			position: absolute;
-			height: 1px;
-			width: 25px;
-			background-color: $green-900;
-			left: 17px;
-		}
 
 		&::before {
+			content: "";
+			position: absolute;
 			top: 17px;
+			left: 18px;
+			z-index: 2;
+			background-image: url("../images/burger-dropdown.svg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			width: 25px;
+			height: 17px;
 		}
 
 		&::after {
-			top: 33px;
+			content: "";
+			position: absolute;
+			top: 23px;
+			right: 18px;
+			background-image: url("../images/arrow-dropdown.svg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			width: 7px;
+			height: 4px;
 		}
 
 		&--active {
-			border-radius: 6px 6px 0px 0px;
+			border-radius: 6px 6px 0 0;
 
 			&:hover {
 				background-color: $green-200;
 			}
 		}
-
-
 	}
-
-	&__line {
-		position: absolute;
-		height: 1px;
-		width: 20px;
-		background-color: $green-900;
-		top: 25px;
-		left: 17px;
-	}
-
 
 	&__text {
 		position: relative;
-
-		&::before,
-		&::after {
-			content: '';
-			position: absolute;
-			height: 1px;
-			width: 5px;
-			background-color: $green-900;
-			top: 9px;
-			right: 0px;
-		}
-
-		&::before {
-			// top: 0px;
-			right: -25px;
-			transform: rotate(45deg);
-		}
-
-		&::after {
-			// top: 0px;
-			right: -28px;
-			transform: rotate(-45deg);
-		}
 	}
 
-
 	&__list {
-
 		transform: translateY(-200%);
 		position: absolute;
 		transition: transform 0.3s;
@@ -215,9 +171,8 @@
 		width: 100%;
 		border-radius: 0 0 7px 7px;
 		z-index: 3;
-
+		overflow-y: hidden;
 		&--active {
-
 			display: block;
 			transform: translateY(0%);
 			background-color: $white;
@@ -230,13 +185,13 @@
 		border: 1px solid $green-100;
 
 		&:hover {
-			box-shadow: 3px 0px 0px 0px $green-900 inset;
-			border-left: none;
+			box-shadow: 3px 0 0 0 $green-900 inset;
 			color: $green-900;
 		}
 
-		&:focus {
-			outline: 3px solid $green-900;
+		&:focus-within {
+			box-shadow: 0 0 0 3px $green-200 inset;
+			color: $dark-900;
 		}
 
 		&:active {
@@ -244,12 +199,10 @@
 			box-shadow: none;
 			color: $silver-600;
 		}
-
 	}
 
 	&__link {
 		outline: transparent;
-	
 	}
 }
 
@@ -267,7 +220,7 @@
 		background-color: $dark-800;
 		width: 20px;
 		height: 20px;
-		mask-image: url('../../images/sprite.svg#icon-search');
+		mask-image: url("../../images/sprite.svg#icon-search");
 		mask-repeat: no-repeat;
 		mask-size: contain;
 		mask-position: center;
@@ -295,30 +248,23 @@
 		line-height: 1.4;
 		text-transform: uppercase;
 		padding: 15px 52px;
-		border-radius: 0px 6px 6px 0px;
+		border-radius: 0 6px 6px 0;
 		transition: background-color 0.3s, box-shadow 0.3s;
 
 		&:hover {
-			background-color: #50534B;
+			background-color: #50534b;
 		}
 
 		&:focus {
 			outline: 4px solid $green-200;
-
 		}
 
 		&:active {
-			box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+			box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
 			outline: transparent;
 			color: $silver-600;
-
 		}
-
-
-
 	}
-
-
 }
 
 .users {
@@ -326,79 +272,75 @@
 	position: relative;
 
 	&__item {
-
 		position: absolute;
+		border-radius: 6px;
 
 		&--user {
-			top: -23px;
+			top: -27px;
 			left: 18px;
 		}
 
 		&--heart {
-			top: -23px;
+			top: -27px;
 			left: 80px;
 		}
 
 		&--cart {
-			top: -23px;
-			left: 150px;
+			top: -27px;
+			left: 144px;
 		}
 
+		&:focus-within {
+			box-shadow: inset 0 0 0 3px #eff6e7;
+			background-color: rgba(255, 255, 255, 0.1);
+		}
+
+		&:active {
+			box-shadow: none;
+		}
 	}
 
 	&__link {
-
 		display: block;
 		width: 50px;
 		height: 50px;
-		// border:1px solid black;
 		position: relative;
 		border-radius: 3px;
-		outline: none;
+		outline: transparent;
 
 		&:hover {
-			// background-color: #FFFFFF;
 			opacity: 0.8;
-
-		}
-
-		&:focus {
-			box-shadow: 0 0 0 3px $green-100;
 		}
 
 		&::before {
-			content: '';
+			content: "";
 			display: block;
 			position: absolute;
 			background-color: $white;
 			mask-repeat: no-repeat;
 			mask-size: contain;
 			mask-position: center;
-			top: 7px;
-			left: 8px;
-			// z-index: 4;
 		}
 
 		&--user {
 			&::before {
-				mask-image: url('../../images/sprite.svg#icon-user');
-				width: 33.85px;
+				mask-image: url("../../images/sprite.svg#icon-user");
+				width: 44.85px;
 				height: 32px;
+				top: 8px;
+				left: 2.5px;
 			}
 		}
 
 		&--heart {
 			&::before {
-
-				mask-image: url('../../images/sprite.svg#icon-heart');
-				width: 32px;
+				mask-image: url("../../images/sprite.svg#icon-heart");
+				width: 37px;
 				height: 28.27px;
+				top: 12px;
+				left: 6.5px;
 			}
-
 		}
-
-
-
 	}
 
 	&__quantity {
@@ -415,52 +357,48 @@
 		width: 18px;
 		height: 18px;
 		text-align: center;
-		opacity: 1;
 
 		&--heart {
-			top: 0;
+			top: 3px;
+			left: 1px;
+		}
+
+		&--cart {
+			top: 3px;
 			left: 0;
 		}
 
-		&--cart {
-			top: 0px;
-			left: 5px;
+		&:hover {
+			opacity: 1;
 		}
 	}
 
-
 	&__btn {
-		position: relative;
 		display: block;
+		position: relative;
 		width: 50px;
 		height: 50px;
 		border-radius: 3px;
-		outline: none;
+		outline: transparent;
 
 		&--cart {
 			&::before {
-				content: '';
+				content: "";
 				position: absolute;
-				mask-image: url('../../images/sprite.svg#icon-cart');
+				top: 7.5px;
+				left: 2px;
+				width: 40px;
+				height: 30.77px;
+				mask-image: url("../../images/sprite.svg#icon-cart");
 				background-color: $white;
 				mask-repeat: no-repeat;
 				mask-size: contain;
 				mask-position: center;
-				width: 32px;
-				height: 30.77px;
-				top: 6px;
-				left: 7px;
 			}
 		}
 
 		&:hover {
-			// background-color: #FFFFFF;
 			opacity: 0.8;
-
-		}
-
-		&:focus {
-			box-shadow: 0 0 0 3px $green-100;
 		}
 	}
 }

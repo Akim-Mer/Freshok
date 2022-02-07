@@ -6,21 +6,20 @@
 @import 'common/global';
 
 //Подлючаем компоненты
-// @import 'components/filters.scss';
-// @import 'components/product-card.scss';
-@import 'components/socials.scss';
+@import 'components/filters.scss';
+@import 'components/product-card.scss';
 //Подлючаем стили секций
 
 // header
-@import 'components/header';
+@import 'header';
 // main
-@import 'components/top-slider.scss';
-@import 'components/services.scss';
-@import 'components/top-products.scss';
-@import 'components/banners.scss';
-@import 'components/promo.scss';
-@import 'components/brends.scss';
-@import 'components/blog.scss';
+@import 'top-slider.scss';
+@import 'services.scss';
+@import 'top-products.scss';
+@import 'banners.scss';
+@import 'promo.scss';
+@import 'brends.scss';
+@import 'blog.scss';
 
 // footer
-@import 'components/footer';
+@import 'footer';

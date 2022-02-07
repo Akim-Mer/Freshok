@@ -1,0 +1,191 @@
+.footer {
+	background-color: $dark-800;
+	color: $white;
+	font-size: 14px;
+	line-height: 1.4;
+	padding: 30px 0 0;
+	letter-spacing: 0.001em;
+
+	&__logo {
+		display: block;
+		margin-bottom: 26px;
+		max-width: 200px;
+	}
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 30px;
+	}
+
+	&__list {
+		column-count: 3;
+		column-gap: 75px;
+	}
+
+	&__item {
+		display: block;
+		margin-bottom: 18px;
+		transition: opacity 0.3s;
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&:hover {
+			opacity: 0.7;
+		}
+
+		&:focus-within {
+			box-shadow: 0 0 0 3px $green-100;
+			border-radius: 4px;
+			opacity: 1;
+		}
+	}
+
+	&__link {
+		outline: none;
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__bottom {
+		padding: 28px 0;
+		border-top: 1px solid rgb(100%, 100%, 100%, 0.1);
+	}
+
+	&__bottom-list {
+		display: flex;
+	}
+
+	&__bottom-item {
+		margin-right: 24px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.form-subscribe {
+	margin-right: 67px;
+
+	&__label {
+		margin-bottom: 14px;
+		letter-spacing: 0.001em;
+	}
+
+	&__input {
+		display: flex;
+	}
+
+	&__email {
+		background-color: $white;
+		padding: 10px;
+		border-radius: 6px 0 0 6px;
+	}
+
+	&__btn {
+		background-color: $green-900;
+		color: $white;
+		font-weight: 700;
+		font-size: 12px;
+		line-height: 1;
+		text-transform: uppercase;
+		padding: 12px 13px;
+		border-radius: 0 6px 6px 0;
+		transition: background-color 0.3s, color 0.3s;
+
+		&:hover {
+			background-color: #4d800c;
+		}
+
+		&:focus {
+			outline: 4px solid $green-200;
+		}
+
+		&:active {
+			box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+			outline: transparent;
+			color: $silver-600;
+			&::before {
+				background-color: $silver-600;
+			}
+		}
+	}
+}
+
+.contacts {
+	margin-bottom: 18px;
+
+	&__item {
+		margin-bottom: 18px;
+		transition: opacity 0.3s;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&:hover {
+			opacity: 0.7;
+		}
+
+		&:focus-within {
+			box-shadow: 0 0 0 3px $green-100;
+			border-radius: 4px;
+			opacity: 1;
+		}
+	}
+
+	&__link {
+		outline: transparent;
+	}
+}
+
+.socials {
+	display: flex;
+	&__item {
+		width: 32px;
+		height: 32px;
+		margin-right: 11.92px;
+		position: relative;
+		border-radius: 3px;
+		&:focus-within {
+			box-shadow: 0 0 0 3px #e0edcf;
+		}
+		&:active {
+			box-shadow: none;
+		}
+	}
+
+	&__link {
+		//! ИНЛАЙН SVG !!!!
+		position: absolute;
+		display: block;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 32px;
+		height: 32px;
+		top: 0;
+		left: -0.5px;
+		outline: transparent;
+		transition: opacity 0.3s, filter 0.3s;
+
+		&:hover {
+			opacity: 0.7;
+		}
+
+		&:active {
+			opacity: 1;
+			filter: invert(4%) sepia(65%) saturate(177%) hue-rotate(25deg) brightness(95%) contrast(95%);
+		}
+	}
+}

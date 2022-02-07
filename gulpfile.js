@@ -18,15 +18,15 @@ const replace = require('gulp-replace');
 
 function svgSprites() {
 	return src('app/images/icons/*.svg') // выбираем в папке с иконками все файлы с расширением svg
-	.pipe(cheerio({
-			run: ($) => {
-				$("[fill]").removeAttr("fill"); // очищаем цвет у иконок по умолчанию, чтобы можно было задать свой
-				$("[stroke]").removeAttr("stroke"); // очищаем, если есть лишние атрибуты строк
-				$("[style]").removeAttr("style"); // убираем внутренние стили для иконок
-			},
-			parserOptions: { xmlMode: true },
-		})
-	)  
+	// .pipe(cheerio({
+	// 		run: ($) => {
+	// 			$("[fill]").removeAttr("fill"); // очищаем цвет у иконок по умолчанию, чтобы можно было задать свой
+	// 			$("[stroke]").removeAttr("stroke"); // очищаем, если есть лишние атрибуты строк
+	// 			$("[style]").removeAttr("style"); // убираем внутренние стили для иконок
+	// 		},
+	// 		parserOptions: { xmlMode: true },
+	// 	})
+	// )  
 	.pipe(replace('&gt;','>'))
 	.pipe(
 		svgSprite({

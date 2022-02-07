@@ -1,0 +1,242 @@
+.product-card {
+	position: relative;
+	padding-top: 56px;
+	border: 1px solid rgba(17, 17, 17, 0.2);
+	border-radius: 6px;
+	background-color: $white;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	transition: border 0.3s;
+	&:hover {
+		border: 1px solid $green-900;
+	}
+
+	&__favorite {
+		position: absolute;
+		top: 9px;
+		right: 5px;
+		width: 44px;
+		height: 44px;
+		border-radius: 3px;
+		outline: transparent;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&::before {
+			content: "";
+			position: absolute;
+			display: block;
+			background-color: $silver-600;
+			mask-image: url("../../images/sprite.svg#icon-product-heart");
+			mask-repeat: no-repeat;
+			mask-size: contain;
+			mask-position: center;
+			width: 35px;
+			height: 35px;
+			transition: background-color 0.2s, opacity 0.2s;
+		}
+
+		&:hover {
+			&::before {
+				content: "";
+				background-color: $yellow-900;
+			}
+		}
+
+		&:focus-within {
+			box-shadow: 0 0 0 3px #e0edcf;
+		}
+
+		&:active {
+			box-shadow: none;
+			&::before {
+				background-color: $yellow-900;
+				opacity: 0.4;
+			}
+		}
+	}
+
+	&__image-box {
+		display: block;
+		width: 100%;
+		padding-bottom: 72.15%;
+		position: relative;
+		overflow-x: hidden;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			transition: box-shadow 0.2s, transform 0.2s;
+		}
+
+		&::before {
+			display: block;
+			background-image: url("../../images/product-search.svg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			width: 48px;
+			height: 48px;
+			top: 85px;
+			left: 124px;
+			z-index: 4;
+			transform: translateY(-100em);
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			box-shadow: transparent;
+			width: 100%;
+			height: 100%;
+		}
+
+		&:hover {
+			&::before {
+				transform: translateY(0em);
+			}
+
+			&::after {
+				box-shadow: inset 0 0 0 200px rgba(0, 0, 0, 0.1);
+			}
+		}
+	}
+
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+
+	&__info {
+		padding: 18px;
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+	}
+
+	&__title {
+		flex: 1 1 auto;
+	}
+
+	&__name {
+		font-weight: 600;
+		font-size: 14px;
+		margin-bottom: 10px;
+		@include line-clamp(3);
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+
+	&__cart {
+		background-color: $green-900;
+		position: relative;
+		width: 32px;
+		height: 32px;
+		border-radius: 3px;
+		transition: background-color 0.2s, box-shadow 0.2s;
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			background-color: $white;
+			mask-image: url("../../images/sprite.svg#icon-product-cart");
+			mask-repeat: no-repeat;
+			mask-size: contain;
+			mask-position: center;
+			width: 16px;
+			height: 15.38px;
+			top: 25%;
+			left: 25%;
+		}
+
+		&:hover {
+			background-color: #4d800c;
+		}
+
+		&:focus {
+			outline: 4px solid $green-200;
+		}
+
+		&:active {
+			box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+			outline: transparent;
+
+			&::before {
+				background-color: $silver-600;
+			}
+		}
+	}
+}
+
+.badges {
+	position: absolute;
+	top: 12px;
+	left: 12px;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: baseline;
+	row-gap: 6px;
+	&__item {
+		display: none;
+		font-weight: 700;
+		font-size: 10px;
+		line-height: 1;
+		text-transform: uppercase;
+		padding: 3px 6px;
+		border-radius: 6px;
+		letter-spacing: 0.03em;
+		color: $white;
+
+		&--on {
+			display: block;
+		}
+
+		&--new {
+			background-color: $green-900;
+		}
+
+		&--sale {
+			background-color: $red-900;
+		}
+
+		&--hit {
+			background-color: $orange-900;
+		}
+	}
+}
+
+.prices {
+	position: relative;
+
+	&__item {
+		line-height: 1;
+		color: $dark-800;
+
+		&--old {
+			display: block;
+			position: relative;
+			color: $silver-600;
+			&::before {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 1px;
+				background-color: $silver-600;
+				transform: rotate(-14deg);
+				top: 50%;
+			}
+		}
+	}
+}
