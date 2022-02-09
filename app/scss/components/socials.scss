@@ -1,0 +1,40 @@
+.socials {
+	display: flex;
+	&__item {
+		width: 32px;
+		height: 32px;
+		margin-right: 11px;
+		position: relative;
+		border-radius: 3px;
+		&:focus-within {
+			box-shadow: 0 0 0 3px #e0edcf;
+		}
+		&:active {
+			box-shadow: none;
+		}
+	}
+
+	&__link {
+		//! ИНЛАЙН SVG !!!!
+		position: absolute;
+		display: block;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		width: 32px;
+		height: 32px;
+		top: 0;
+		left: -0.5px;
+		outline: transparent;
+		transition: opacity 0.3s, filter 0.3s;
+
+		&:hover {
+			opacity: 0.7;
+		}
+
+		&:active {
+			opacity: 1;
+			filter: invert(4%) sepia(65%) saturate(177%) hue-rotate(25deg) brightness(95%) contrast(95%);
+		}
+	}
+}

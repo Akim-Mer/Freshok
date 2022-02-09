@@ -4,7 +4,7 @@
 	text-align: center;
 
 	&__title {
-		margin-bottom: 42px;
+		margin-bottom: 32px;
 	}
 
 	&__list {
@@ -15,10 +15,15 @@
 		margin-bottom: 48px;
 	}
 
+	&__existence {
+		margin-bottom: 3px;
+	}
+
 	.product-card {
 		flex-direction: row;
 		padding: 12px;
 		max-height: 124px;
+
 		&__image-box {
 			max-width: 100px;
 			padding-bottom: 36.15%;
@@ -39,6 +44,12 @@
 			padding: 0;
 		}
 
+		&__title {
+			flex: none;
+			max-height: 67px;
+			height: 100%;
+		}
+
 		&__name {
 			font-weight: 600;
 			font-size: 14px;
@@ -49,8 +60,9 @@
 		&__stock {
 			font-weight: 600;
 			font-size: 10px;
-			line-height: 2;
+			line-height: 1;
 			display: none;
+			letter-spacing: 0;
 
 			&--pres {
 				display: block;
@@ -79,8 +91,10 @@
 			font-weight: 600;
 			font-size: 20px;
 			line-height: 1;
+
 			&__item {
-				margin-right: 12px;
+				margin-right: 13px;
+
 				&--old {
 					font-weight: 400;
 					font-size: 12px;
@@ -106,18 +120,18 @@
 				background-color: $yellow-900;
 				mask-image: url("../../images/sprite.svg#icon-star");
 				mask-repeat: no-repeat;
-				mask-size: contain;
+				mask-size: cover;
 				mask-position: center;
-				width: 21px;
-				height: 21px;
-				top: -6px;
-				right: -1.5px;
+				width: 16px;
+				height: 16px;
+				top: 2px;
+				right: 1px;
 			}
 		}
 	}
 
 	.filters {
-		margin-bottom: 56px;
+		margin-bottom: 48px;
 
 		&__item {
 			&:not(:last-child) {
