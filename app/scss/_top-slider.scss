@@ -1,104 +1,17 @@
 .top-slider {
+
 	&__list {
+		display: flex;
+		align-items: center;
 		position: relative;
 	}
 
-	&__list {
-		button {
-			position: absolute;
-			top: calc(50% - 30px);
-			outline: transparent;
-			transition: background-color 0.3s, box-shadow 0.3s;
-			&:focus {
-				box-shadow: 0 0 0 3px rgba(99, 166, 15, 0.8);
-			}
-
-			&:hover {
-				background-color: $green-200;
-				box-shadow: none;
-			}
-
-			&:active {
-				background-color: $white;
-				box-shadow: none;
-			}
-		}
-	}
-
-	.slick-prev,
-	.slick-next {
-		position: absolute;
-		font-size: 0;
-		width: 60px;
-		height: 60px;
-		background-color: rgba(255, 255, 255, 0.8);
-		border-radius: 6px;
-		z-index: 3;
-		transition: background-color 0.3s;
-		&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			height: 3px;
-			width: 25px;
-			background-color: $dark-800;
-			border-radius: 4px;
-			transition: color 0.3s;
-		}
-
-		&:hover {
-			&::before,
-			&::after {
-				content: "";
-				background-color: $green-900;
-			}
-		}
-
-		&:active {
-			&::before,
-			&::after {
-				content: "";
-				background-color: $green-900;
-			}
-		}
-	}
-
-	.slick-prev {
-		left: calc(6% - 60px);
-		&::before {
-			top: 35px;
-			left: 18px;
-			transform: rotate(44deg);
-		}
-		&::after {
-			top: 19px;
-			left: 18px;
-			transform: rotate(318deg);
-			border-radius: 4px;
-		}
-	}
-	.slick-next {
-		right: calc(6% - 60px);
-		&::before {
-			top: 35px;
-			left: 17px;
-			transform: rotate(137deg);
-		}
-		&::after {
-			top: 19px;
-			left: 17px;
-			transform: rotate(44deg);
-		}
-	}
-
 	&__item {
-		display: flex !important;
-		align-items: center;
+		display: flex;
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: top;
-		max-height: 600px;
-		height: calc(100vh - 160px);
+		height: 600px;
 	}
 
 	&__inner {
@@ -111,24 +24,26 @@
 		background: rgba(255, 255, 255, 0.8);
 		border-radius: 4px;
 		letter-spacing: 0;
+		margin-top: 142px;
 	}
 
 	&__title {
 		text-transform: uppercase;
-		font-family: "Ruda";
+		font-family: "Ruda", sans-serif;
 		font-weight: 900;
 		font-size: 60px;
 		line-height: 1.3;
-		color: $dark-800;
+		color: $dark-500;
 	}
 
 	&__subtitle {
 		text-transform: uppercase;
-		font-family: "Ruda";
+		font-family: "Ruda", sans-serif;
 		font-weight: 900;
 		font-size: 60px;
 		color: $red-900;
-		margin-bottom: 12px;
+		margin-bottom: 8px;
+		line-height: 1.3;
 	}
 
 	&__text {
@@ -139,4 +54,71 @@
 	}
 }
 
-//
+
+.btn-prev,
+.btn-next {
+	display: block;
+	width: 60px;
+	height: 60px;
+	z-index: 4;
+	position: absolute;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 6px;
+	outline: transparent;
+
+	&:focus {
+		box-shadow: 0 0 0 3px rgba(99, 166, 15, 0.6);
+	}
+
+	&:hover {
+		background-color: $green-200;
+		box-shadow: none;
+	}
+
+	&:active {
+		background-color: $white;
+		box-shadow: none;
+	}
+
+	&::before {
+		content: '';
+		background-color: $dark-800;
+		position: absolute;
+		display: block;
+		mask-repeat: no-repeat;
+		mask-size: contain;
+		mask-position: center;
+		width: 59px;
+		height: 32px;
+		top: 15.5px;
+		transition: background-color 0.3s;
+	}
+
+	&:hover {
+		&::before {
+			background-color: #63a60e;
+		}
+	}
+}
+
+
+.btn-prev {
+	top: 270px;
+	left: 60px;
+
+	&::before {
+		mask-image: url('../images/sprite.svg#icon-butt-arrow');
+		transform: rotate(180deg);
+		right: 0px;
+	}
+}
+
+.btn-next {
+	top: 270px;
+	right: 60px;
+
+	&::before {
+		mask-image: url('../images/sprite.svg#icon-butt-arrow');
+		left: 0px;
+	}
+}

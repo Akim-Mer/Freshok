@@ -1,25 +1,25 @@
 .brends {
 	padding: 72px 0;
 
+	&__container {
+		padding: 0;
+	}
+
 	&__item {
-		text-align: center;
+		padding: 0 15px;
 	}
 
 	&__img {
-		display: inline-block;
 		opacity: 0.7;
 		transition: opacity 0.3s;
 		object-fit: cover;
 		max-width: 80px;
 		width: 100%;
+		margin: 0 auto;
+
 		&:hover {
 			opacity: 1;
 		}
-	}
-
-	.slick-slide img {
-		display: inline-block;
-
 	}
 
 	.slick-track {

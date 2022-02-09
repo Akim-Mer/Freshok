@@ -6,16 +6,19 @@
 		background-color: $silver-100;
 		padding: 48px 0 29px;
 	}
+
 	&__list {
 		display: flex;
 		justify-content: center;
 	}
+
 	&__item {
 		padding-left: 74px;
 		margin-right: 65px;
 		position: relative;
 		max-width: 264px;
 		width: 100%;
+
 		&:last-child {
 			margin-right: 0;
 		}
@@ -28,37 +31,34 @@
 				display: block;
 				position: absolute;
 				background-repeat: no-repeat;
-				background-size: contain;
+				background-size: cover;
 				background-position: center;
 				width: 50px;
 				height: 50px;
+				top: 0;
+				left: 0;
 			}
 		}
 
 		&--scooter {
 			&::before {
 				content: "";
-				background-image: url("../images/icons/icon-scooter.svg");
-				top: 0;
-				left: 0;
+				background-image: url("../images/sprite.svg#icon-scooter");
+
 			}
 		}
 
 		&--return {
 			&::before {
 				content: "";
-				background-image: url("../images/icons/icon-return-box.svg");
-				top: 0;
-				left: 0;
+				background-image: url("../images/sprite.svg#icon-return-box");
 			}
 		}
 
 		&--hours {
 			&::before {
 				content: "";
-				background-image: url("../images/icons/icon-24-hours.svg");
-				top: 0;
-				left: 0;
+				background-image: url("../images/sprite.svg#icon-24-hours");
 			}
 		}
 	}
@@ -69,6 +69,7 @@
 		margin-bottom: 6px;
 		letter-spacing: 0;
 	}
+
 	&__text {
 		font-size: 14px;
 		letter-spacing: 0;

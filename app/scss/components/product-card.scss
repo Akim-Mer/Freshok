@@ -1,6 +1,6 @@
 .product-card {
 	position: relative;
-	padding-top: 56px;
+	padding-top: 57px;
 	border: 1px solid rgba(17, 17, 17, 0.2);
 	border-radius: 6px;
 	background-color: $white;
@@ -8,14 +8,15 @@
 	display: flex;
 	flex-direction: column;
 	transition: border 0.3s;
+
 	&:hover {
 		border: 1px solid $green-900;
 	}
 
 	&__favorite {
 		position: absolute;
-		top: 9px;
-		right: 5px;
+		top: 10px;
+		right: 6px;
 		width: 44px;
 		height: 44px;
 		border-radius: 3px;
@@ -31,10 +32,10 @@
 			background-color: $silver-600;
 			mask-image: url("../../images/sprite.svg#icon-product-heart");
 			mask-repeat: no-repeat;
-			mask-size: contain;
+			mask-size: cover;
 			mask-position: center;
-			width: 35px;
-			height: 35px;
+			width: 32px;
+			height: 29px;
 			transition: background-color 0.2s, opacity 0.2s;
 		}
 
@@ -51,6 +52,7 @@
 
 		&:active {
 			box-shadow: none;
+
 			&::before {
 				background-color: $yellow-900;
 				opacity: 0.4;
@@ -64,6 +66,7 @@
 		padding-bottom: 72.15%;
 		position: relative;
 		overflow-x: hidden;
+
 		&::before,
 		&::after {
 			content: "";
@@ -128,6 +131,7 @@
 		font-weight: 600;
 		font-size: 14px;
 		margin-bottom: 10px;
+		line-height: 1.4;
 		@include line-clamp(3);
 	}
 
@@ -152,7 +156,7 @@
 			background-color: $white;
 			mask-image: url("../../images/sprite.svg#icon-product-cart");
 			mask-repeat: no-repeat;
-			mask-size: contain;
+			mask-size: cover;
 			mask-position: center;
 			width: 16px;
 			height: 15.38px;
@@ -181,13 +185,14 @@
 
 .badges {
 	position: absolute;
-	top: 12px;
-	left: 12px;
+	top: 14px;
+	left: 11px;
 	z-index: 2;
 	display: flex;
 	flex-direction: column;
 	align-items: baseline;
 	row-gap: 6px;
+
 	&__item {
 		display: none;
 		font-weight: 700;
@@ -228,6 +233,7 @@
 			display: block;
 			position: relative;
 			color: $silver-600;
+
 			&::before {
 				content: "";
 				position: absolute;
