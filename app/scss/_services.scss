@@ -1,15 +1,24 @@
 .services {
 	line-height: 1.4;
 	position: relative;
+	letter-spacing: 0;
 
 	&__inner {
 		background-color: $silver-100;
 		padding: 48px 0 29px;
+
+		@include media-768 {
+			padding: 30px 0 29px;
+		}
 	}
 
 	&__list {
 		display: flex;
 		justify-content: center;
+
+		@include media-768 {
+			flex-direction: column;
+		}
 	}
 
 	&__item {
@@ -18,6 +27,15 @@
 		position: relative;
 		max-width: 264px;
 		width: 100%;
+
+		@include media-768 {
+			max-width: 100%;
+			margin-bottom: 31px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
 
 		&:last-child {
 			margin-right: 0;
@@ -44,7 +62,6 @@
 			&::before {
 				content: "";
 				background-image: url("../images/sprite.svg#icon-scooter");
-
 			}
 		}
 
@@ -67,11 +84,9 @@
 		font-weight: 600;
 		font-size: 16px;
 		margin-bottom: 6px;
-		letter-spacing: 0;
 	}
 
 	&__text {
 		font-size: 14px;
-		letter-spacing: 0;
 	}
 }

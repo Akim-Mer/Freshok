@@ -1,22 +1,24 @@
 .socials {
 	display: flex;
+
 	&__item {
-		width: 32px;
-		height: 32px;
 		margin-right: 11px;
-		position: relative;
 		border-radius: 3px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
 		&:focus-within {
 			box-shadow: 0 0 0 3px #e0edcf;
 		}
+
 		&:active {
 			box-shadow: none;
 		}
 	}
 
 	&__link {
-		//! ИНЛАЙН SVG !!!!
-		position: absolute;
 		display: block;
 		background-repeat: no-repeat;
 		background-size: contain;

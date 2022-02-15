@@ -6,29 +6,93 @@
 	padding: 30px 0 0;
 	letter-spacing: 0.001em;
 
+	@include media-768 {
+		padding: 24px 0 0;
+	}
+
+	.container {
+		@include media-768 {
+			padding: 0;
+		}
+	}
+
+	.logo__img {
+		@include media-768 {
+			max-width: 200px;
+		}
+	}
+
 	&__logo {
 		display: block;
 		margin-bottom: 30px;
 		max-width: 200px;
+
+		@include media-992 {
+			margin-bottom: 24px;
+		}
+
+		@include media-768 {
+			padding-left: 15px;
+		}
+
+		@include media-576 {
+			margin: 0 auto;
+			margin-bottom: 24px;
+			padding-left: 0;
+		}
 	}
 
 	&__content {
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 30px;
+
+		@include media-768 {
+			flex-direction: column;
+		}
 	}
 
 	&__list {
 		column-count: 3;
 		column-gap: 75px;
-		overflow: visible;
-		break-inside: avoid-page;
+		page-break-inside: avoid; //я пытался с помощью avoid убрать разрыв, но без успешно
+		break-inside: avoid-column;
+
+		@include media-992 {
+			order: 2;
+			padding: 24px 0;
+		}
+
+		@include media-768 {
+			column-count: 2;
+			column-gap: 50px;
+			max-width: 314px;
+			width: 100%;
+		}
+
+		@include media-576 {
+			max-width: 350px;
+			margin-left: 64px;
+			column-gap: 0;
+		}
 	}
 
 	&__item {
 		display: block;
 		margin-bottom: 18px;
 		transition: opacity 0.3s;
+		@include media-768 {
+			&:nth-child(-n + 4) {
+				padding-left: 15px;
+			}
+		}
+
+		@include media-576 {
+			&:nth-child(-n + 4) {
+				padding-left: 0;
+			}
+			padding-left: 0;
+		}
 
 		&:last-child {
 			margin-bottom: 0;
@@ -41,8 +105,6 @@
 
 	&__link {
 		outline: transparent;
-		page-break-inside: avoid;
-		break-inside: avoid-column;
 
 		&:focus-within {
 			box-shadow: 0 0 0 2px $green-100;
@@ -54,20 +116,75 @@
 	&__info {
 		display: flex;
 		flex-direction: column;
+
+		@include media-992 {
+			order: 1;
+			margin-right: 20px;
+		}
+
+		@include media-768 {
+			margin-right: 0;
+			padding-bottom: 24px;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		}
+
+		@include media-576 {
+			align-items: center;
+		}
 	}
 
 	&__container {
 		display: flex;
 		justify-content: space-between;
+
+		@include media-576 {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__socials {
+		margin-left: 15px;
+		@include media-768 {
+			padding-left: 15px;
+			margin-left: 0;
+		}
+
+		@include media-576 {
+			padding-left: 0;
+		}
 	}
 
 	&__bottom {
 		padding: 28px 0;
 		border-top: 1px solid rgb(100%, 100%, 100%, 0.1);
+
+		@include media-768 {
+			padding: 19px 0;
+		}
+	}
+
+	&__copy {
+		@include media-768 {
+			padding-left: 15px;
+		}
+
+		@include media-576 {
+			order: 2;
+			padding-left: 0;
+		}
 	}
 
 	&__bottom-list {
 		display: flex;
+		@include media-768 {
+			padding-right: 15px;
+		}
+
+		@include media-576 {
+			margin-bottom: 24px;
+			padding-right: 0;
+		}
 	}
 
 	&__bottom-item {
@@ -80,21 +197,64 @@
 }
 
 .form-subscribe {
-	margin-right: 67px;
+	margin-right: 88px;
+
+	@include media-992 {
+		order: 3;
+		margin-right: 0;
+	}
+
+	@include media-768 {
+		padding-top: 15px;
+	}
+
+	@include media-576 {
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto;
+	}
+
+	&--line {
+		@include media-576 {
+		}
+	}
 
 	&__label {
 		margin-bottom: 14px;
 		letter-spacing: 0.001em;
+
+		@include media-768 {
+			padding-left: 15px;
+		}
+
+		@include media-576 {
+			padding: 0;
+			align-self: flex-start;
+		}
 	}
 
 	&__input {
 		display: flex;
+
+		@include media-768 {
+			padding-left: 15px;
+		}
+
+		@include media-576 {
+			padding: 0;
+		}
 	}
 
 	&__email {
 		background-color: $white;
 		padding: 10px;
 		border-radius: 6px 0 0 6px;
+		max-width: 182px;
+		width: 100%;
+		@include media-992 {
+			padding: 0;
+			padding-left: 10px;
+		}
 	}
 
 	&__btn {
@@ -130,12 +290,11 @@
 
 .contacts {
 	margin-bottom: 18px;
-
+	padding-left: 15px;
 	&__item {
 		margin-bottom: 18px;
 		transition: opacity 0.3s;
 		letter-spacing: 0.003em;
-
 		&:last-child {
 			margin-bottom: 0;
 		}

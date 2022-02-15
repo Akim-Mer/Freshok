@@ -3,8 +3,21 @@
 	background-color: $silver-100;
 	text-align: center;
 
+	.container {
+		@include media-576 {
+			padding: 0 38px;
+		}
+	}
+	@include media-992 {
+		padding: 48px 0;
+	}
+
 	&__title {
 		margin-bottom: 32px;
+
+		@include media-768 {
+			margin-bottom: 24px;
+		}
 	}
 
 	&__list {
@@ -13,6 +26,16 @@
 		grid-template-columns: repeat(4, 1fr);
 		grid-gap: 30px;
 		margin-bottom: 48px;
+
+		@include media-1200 {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+			grid-gap: 15px;
+		}
+
+		@include media-768 {
+			margin-bottom: 24px;
+		}
 	}
 
 	&__existence {
@@ -40,6 +63,12 @@
 			}
 		}
 
+		&__img {
+			@include media-1200 {
+				height: 100px;
+			}
+		}
+
 		&__info {
 			padding: 0;
 		}
@@ -64,17 +93,17 @@
 			display: none;
 			letter-spacing: 0;
 
-			&--pres {
+			&--present {
 				display: block;
 				color: $green-900;
 			}
 
-			&--cls {
+			&--close {
 				display: block;
 				color: $red-900;
 			}
 
-			&--not {
+			&--no {
 				display: block;
 				color: $silver-600;
 			}
@@ -124,7 +153,7 @@
 				mask-position: center;
 				width: 16px;
 				height: 16px;
-				top: 2px;
+				top: -1px;
 				right: 1px;
 			}
 		}
@@ -132,6 +161,10 @@
 
 	.filters {
 		margin-bottom: 48px;
+
+		@include media-768 {
+			margin-bottom: 14px;
+		}
 
 		&__item {
 			&:not(:last-child) {
