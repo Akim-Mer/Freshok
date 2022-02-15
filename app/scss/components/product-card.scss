@@ -9,6 +9,10 @@
 	flex-direction: column;
 	transition: border 0.3s;
 
+	@include media-576 {
+		padding-top: 60px;
+	}
+
 	&:hover {
 		border: 1px solid $green-900;
 	}
@@ -25,6 +29,10 @@
 		justify-content: center;
 		align-items: center;
 
+		@include media-768 {
+			top: 4px;
+			right: 1px;
+		}
 		&::before {
 			content: "";
 			position: absolute;
@@ -37,6 +45,11 @@
 			width: 32px;
 			height: 29px;
 			transition: background-color 0.2s, opacity 0.2s;
+
+			@include media-576 {
+				width: 24px;
+				height: 21px;
+			}
 		}
 
 		&:hover {
@@ -66,26 +79,36 @@
 		padding-bottom: 72.15%;
 		position: relative;
 		overflow-x: hidden;
+		overflow-y: hidden;
+
+		@include media-576 {
+			padding-bottom: 70%;
+		}
 
 		&::before,
 		&::after {
 			content: "";
 			position: absolute;
-			transition: box-shadow 0.2s, transform 0.2s;
+			transition: box-shadow 0.2s, opacity 0.3s;
 		}
 
 		&::before {
 			display: block;
-			background-image: url("../../images/product-search.svg");
+			background-image: url("../../images/sprite.svg#icon-product-search");
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-position: center;
 			width: 48px;
 			height: 48px;
-			top: 85px;
-			left: 124px;
+			top: calc(50% - 24px);
+			left: calc(50% - 24px);
 			z-index: 4;
-			transform: translateY(-100em);
+			opacity: 0;
+
+			@include media-576 {
+				width: 35px;
+				height: 35px;
+			}
 		}
 
 		&::after {
@@ -98,7 +121,17 @@
 
 		&:hover {
 			&::before {
-				transform: translateY(0em);
+				opacity: 1;
+			}
+
+			&::after {
+				box-shadow: inset 0 0 0 200px rgba(0, 0, 0, 0.1);
+			}
+		}
+
+		&:focus {
+			&::before {
+				opacity: 1;
 			}
 
 			&::after {
@@ -121,6 +154,10 @@
 		display: flex;
 		flex-direction: column;
 		flex-grow: 1;
+
+		@include media-768 {
+			padding: 15px 12px 12px;
+		}
 	}
 
 	&__title {
@@ -133,6 +170,10 @@
 		margin-bottom: 10px;
 		line-height: 1.4;
 		@include line-clamp(3);
+
+		@include media-576 {
+			margin-bottom: 44px;
+		}
 	}
 
 	&__bottom {
@@ -154,7 +195,7 @@
 			display: block;
 			position: absolute;
 			background-color: $white;
-			mask-image: url("../../images/sprite.svg#icon-product-cart");
+			mask-image: url("../images/sprite.svg#icon-product-cart");
 			mask-repeat: no-repeat;
 			mask-size: cover;
 			mask-position: center;

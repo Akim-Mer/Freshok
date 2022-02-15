@@ -1,15 +1,31 @@
 .blog {
 	padding-bottom: 72px;
 
+	@include media-768 {
+		padding-bottom: 28px;
+	}
+
 	&__top {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		margin-bottom: 30px;
+
+		@include media-768 {
+			flex-direction: column;
+			align-items: flex-start;
+			margin-bottom: 24px;
+		}
+	}
+
+	.title {
+		margin-bottom: 0;
 	}
 
 	&__title {
-		margin-bottom: 0;
+		@include media-768 {
+			margin-bottom: 5px;
+		}
 	}
 
 	&__link {
@@ -23,6 +39,10 @@
 		outline: none;
 		transition: color 0.3s;
 		margin-right: 6px;
+
+		@include media-576 {
+			line-height: 1.6;
+		}
 
 		&:hover {
 			color: #4d800c;
@@ -47,6 +67,10 @@
 	&__info {
 		display: flex;
 		justify-content: space-between;
+
+		@include media-768 {
+			display: block;
+		}
 	}
 
 	&__item {
@@ -58,6 +82,15 @@
 		&:focus-within {
 			outline: 2px solid $green-900;
 		}
+
+		@include media-992 {
+			width: calc(100% / 3 - (30px / 3));
+		}
+
+		@include media-768 {
+			width: 100%;
+			margin-bottom: 15px;
+		}
 	}
 
 	&__link-item {
@@ -67,6 +100,11 @@
 	&__img {
 		border-radius: 6px 6px 0 0;
 		object-fit: cover;
+
+		@include media-768 {
+			height: 100%;
+			width: 100%;
+		}
 	}
 
 	&__date {
@@ -99,17 +137,29 @@
 		text-transform: uppercase;
 	}
 
+	&__visible {
+		padding: 18px;
+
+		@include media-992 {
+			padding: 15px;
+		}
+	}
+
 	&__text {
-		padding: 18px 18px;
 		font-weight: 600;
 		font-size: 16px;
 		line-height: 1.5;
-		letter-spacing: 0px;
+		letter-spacing: 0;
 		transition: color 0.3s;
 		@include line-clamp(4);
 
 		&:hover {
 			color: $green-900;
+		}
+
+		@include media-992 {
+			font-size: 14px;
+			line-height: 1.4;
 		}
 	}
 }

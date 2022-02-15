@@ -30,3 +30,52 @@ $white:     #FFFFFF;
 //   font-size: 14px;
 // 	@include line-clamp(3);
 // }
+
+
+$md-1550: 1550;
+$md1: 1200;
+$md2: 992;
+$md3: 768;
+$md4: 576;
+
+
+
+
+
+@mixin media-1550()  {
+	@media (max-width: #{$md-1550}px) {
+	  @content;
+	 }
+  }
+
+@mixin media-1200()  {
+	@media (max-width: #{$md1}px) {
+	  @content;
+	 }
+  }
+@mixin media-992()  {
+	@media (max-width: #{$md2}px) {
+	  @content;
+	 }
+  }
+
+@mixin media-768() {
+	@media (max-width: #{$md3}px) {
+	  @content;
+	 }
+  }
+
+@mixin media-576() {
+	@media (max-width: #{$md4}px) {
+	  @content;
+	 }
+  }
+
+// Использование миксина 
+// .class {
+// 	font-size: 30px;
+// 	  @include r(768) {
+// 		  font-size: 20px;
+// 	  }
+//   }
+

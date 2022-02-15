@@ -3,11 +3,32 @@
 	line-height: 1.4;
 	text-align: center;
 
+	@include media-768 {
+		padding: 53px 0 0;
+	}
+
 	&__list {
 		text-align: left;
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		grid-gap: 30px;
 		margin-bottom: 48px;
+
+		@include media-992 {
+			grid-gap: 15px;
+		}
+
+		@include media-768 {
+			grid-template-columns: repeat(2, 1fr);
+			margin-bottom: 30px;
+		}
+
+		@include media-576 {
+			grid-gap: 5px;
+		}
+	}
+
+	&__btn {
+		margin-left: 8px;
 	}
 }
