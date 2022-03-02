@@ -23,7 +23,7 @@
 	&__list {
 		text-align: left;
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: 1fr 1fr 1fr 1fr;
 		grid-gap: 30px;
 		margin-bottom: 48px;
 
@@ -31,6 +31,11 @@
 			display: grid;
 			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 			grid-gap: 15px;
+		}
+
+		@include media-1200 {
+			grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
 		}
 
 		@include media-768 {
@@ -71,12 +76,6 @@
 
 		&__info {
 			padding: 0;
-		}
-
-		&__title {
-			flex: none;
-			max-height: 67px;
-			height: 100%;
 		}
 
 		&__name {

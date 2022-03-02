@@ -12,9 +12,12 @@ body {
 	color: $dark-900;
 	display: flex;
 	flex-direction: column;
-	@include media-992 {
-	}
 }
+
+.wrapper {
+	overflow-x: hidden;
+}
+
 
 .lock {
 	overflow: hidden;
@@ -48,22 +51,41 @@ body {
 }
 
 .logo {
+	display: flex;
+	flex: 0 0 200px;
+	margin-right: 24px;
+	
 	@include media-1200 {
 		flex: 0 0 60px;
-		overflow: hidden;
+		margin-right: 15px;
 	}
 
-	@include media-768 {
-		flex: 0 0 45px;
+	@include media-992 {
+		margin-right: 0;
+
 	}
 
 	&__img {
+		width: 100%;
 		@include media-1200 {
-			max-width: 180px;
+			display: none;
+		}
+	}
+
+	&__img-mob {
+		display: none;
+		@include media-1200 {
+			display: block;
+			flex: 0 0 56px;
+			
+		}
+
+		@include media-992 {
+			flex: 0 0 42px;
 		}
 
 		@include media-768 {
-			max-width: 135px;
+			flex: 0;
 		}
 	}
 }
@@ -138,6 +160,45 @@ body {
 			outline: none;
 			box-shadow: inset 0px 10px 4px rgba(0, 0, 0, 0.1);
 			color: rgba(99, 166, 14, 0.5);
+		}
+	}
+}
+
+.badges {
+	position: absolute;
+	top: 12px;
+	left: 11px;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: baseline;
+	row-gap: 6px;
+
+	&__item {
+		display: none;
+		font-weight: 700;
+		font-size: 10px;
+		line-height: 1;
+		text-transform: uppercase;
+		padding: 3px 6px;
+		border-radius: 6px;
+		letter-spacing: 0.03em;
+		color: $white;
+
+		&--on {
+			display: block;
+		}
+
+		&--new {
+			background-color: $green-900;
+		}
+
+		&--sale {
+			background-color: $red-900;
+		}
+
+		&--hit {
+			background-color: $orange-900;
 		}
 	}
 }

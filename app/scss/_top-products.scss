@@ -10,7 +10,7 @@
 	&__list {
 		text-align: left;
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: 1fr 1fr 1fr 1fr;
 		grid-gap: 30px;
 		margin-bottom: 48px;
 
@@ -19,8 +19,8 @@
 		}
 
 		@include media-768 {
-			grid-template-columns: repeat(2, 1fr);
-			margin-bottom: 30px;
+			grid-template-columns: 1fr 1fr;
+			margin-bottom: 24px;
 		}
 
 		@include media-576 {

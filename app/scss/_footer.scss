@@ -16,9 +16,11 @@
 		}
 	}
 
-	.logo__img {
-		@include media-768 {
-			max-width: 200px;
+	.logo {
+		&__img {
+			@include media-1200 {
+				display: block;
+			}
 		}
 	}
 
@@ -54,44 +56,57 @@
 
 	&__list {
 		column-count: 3;
-		column-gap: 75px;
+		column-gap: 66px;
 		page-break-inside: avoid; //я пытался с помощью avoid убрать разрыв, но без успешно
 		break-inside: avoid-column;
-
 		@include media-992 {
 			order: 2;
 			padding: 24px 0;
 		}
 
 		@include media-768 {
-			column-count: 2;
 			column-gap: 50px;
-			max-width: 314px;
-			width: 100%;
+			// max-width: 314px;
+			// width: 100%;
+			padding-left: 15px;
+
 		}
 
 		@include media-576 {
 			max-width: 350px;
 			margin-left: 64px;
-			column-gap: 0;
+			column-count: 2;
+			column-gap: 42px;
+			margin-right: -5px;
+			padding-left: 0;
 		}
 	}
 
 	&__item {
 		display: block;
-		margin-bottom: 18px;
+		margin-bottom: 4px;
 		transition: opacity 0.3s;
+		padding: 4px;
+		overflow: hidden;
+		-webkit-column-break-inside:avoid;
+		-moz-column-break-inside:avoid;
+		-moz-page-break-inside:avoid;
+		page-break-inside:avoid;
+		break-inside:avoid-column;
+
 		@include media-768 {
-			&:nth-child(-n + 4) {
-				padding-left: 15px;
-			}
+			// &:nth-child(-n + 4) {
+			// 	padding-left: 15px;
+			// }
 		}
 
 		@include media-576 {
+
+			margin-bottom: 9px;
 			&:nth-child(-n + 4) {
-				padding-left: 0;
+				// padding-left: 0;
 			}
-			padding-left: 0;
+			// padding-left: 0;
 		}
 
 		&:last-child {
@@ -230,6 +245,7 @@
 		@include media-576 {
 			padding: 0;
 			align-self: flex-start;
+			margin-bottom: 18px;
 		}
 	}
 
@@ -237,7 +253,7 @@
 		display: flex;
 
 		@include media-768 {
-			padding-left: 15px;
+			padding: 0 15px;
 		}
 
 		@include media-576 {
@@ -251,9 +267,14 @@
 		border-radius: 6px 0 0 6px;
 		max-width: 182px;
 		width: 100%;
+
 		@include media-992 {
 			padding: 0;
 			padding-left: 10px;
+		}
+
+		@include media-768 {
+			max-width: 100%;
 		}
 	}
 

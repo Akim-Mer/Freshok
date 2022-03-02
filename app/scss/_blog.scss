@@ -2,7 +2,7 @@
 	padding-bottom: 72px;
 
 	@include media-768 {
-		padding-bottom: 28px;
+		padding-bottom: 32px;
 	}
 
 	&__top {
@@ -20,9 +20,14 @@
 
 	.title {
 		margin-bottom: 0;
+
+		@include media-576 {
+			margin-bottom: 5px;
+		}
 	}
 
 	&__title {
+
 		@include media-768 {
 			margin-bottom: 5px;
 		}
@@ -41,7 +46,7 @@
 		margin-right: 6px;
 
 		@include media-576 {
-			line-height: 1.6;
+			line-height: 1.79;
 		}
 
 		&:hover {
@@ -115,7 +120,7 @@
 		flex-direction: column;
 		text-align: center;
 		background-color: $white;
-		padding: 18px 0 13px;
+		padding: 18px 0 8px;
 		border-radius: 0 0 4px 4px;
 		width: 65px;
 	}
@@ -123,7 +128,7 @@
 	&__month {
 		font-weight: 700;
 		font-size: 12px;
-		line-height: 1;
+		line-height: 1,1;
 		letter-spacing: 0.001em;
 		margin-bottom: 3px;
 		display: block;
@@ -141,7 +146,7 @@
 		padding: 18px;
 
 		@include media-992 {
-			padding: 15px;
+			padding: 14px 15px 15px;
 		}
 	}
 
