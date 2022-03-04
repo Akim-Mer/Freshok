@@ -202,3 +202,52 @@ body {
 		}
 	}
 }
+
+.product-card {
+	
+	&__stock {
+		font-weight: 600;
+		font-size: 10px;
+		line-height: 1;
+		display: none;
+		letter-spacing: 0;
+
+		&--present {
+			display: block;
+			color: $green-900;
+		}
+
+		&--close {
+			display: block;
+			color: $red-900;
+		}
+
+		&--no {
+			display: block;
+			color: $silver-600;
+		}
+	}
+
+	&__rating {
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 1;
+		padding-right: 18px;
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			display: block;
+			background-color: $yellow-900;
+			mask-image: url("../../images/sprite.svg#icon-star");
+			mask-repeat: no-repeat;
+			mask-size: cover;
+			mask-position: center;
+			width: 16px;
+			height: 16px;
+			top: -3px;
+			right: 1px;
+		}
+	}
+}

@@ -328,17 +328,17 @@
 					<div class="products__inner">
 						<ul class="products__images-box" >
 							<li class="products__images-item" >
-								<a class="products__img-link" href="№">
+								<a class="products__img-link" href="images/pytahaya750.jpg" data-fancybox="images">
 									<img class="products__img" src="images/pytahaya420.jpg" alt="#">
 								</a>
 							</li>
 							<li class="products__images-item" >
-								<a class="products__img-link" href="№">
+								<a class="products__img-link" href="images/pytahaya750.jpg" data-fancybox="images">
 									<img class="products__img" src="images/pytahaya420.jpg" alt="#">
 								</a>
 							</li>
 							<li class="products__images-item" >
-								<a class="products__img-link" href="№">
+								<a class="products__img-link" href="images/pytahaya750.jpg" data-fancybox="images">
 									<img class="products__img" src="images/pytahaya420.jpg" alt="#">
 								</a>
 							</li>
@@ -356,7 +356,7 @@
 							<div class="products__raiting-box">
 								<div class="products__code">Код: 0111111</div>
 
-								<div class="products__star" data-rateyo-rating ="3"></div> <!-- rateYO в js-->
+								<div class="products__star star" data-rateyo-rating ="3"></div> <!-- rateYO в js-->
 
 								<span class="products__text">В НАЛИЧИИ</span>
 							</div>
@@ -406,64 +406,594 @@
 			<section class="info">
 				<div class="info__container container">
 					<ul class="info__filter">
-						<li class="info__filter-item">
-							<button class="info__filter-btn">ОПИСАНИЕ </button>
+						 <li class="info__filter-item">
+							<a class="info__link info__link--light" href="#tabs-1">
+								<span class="info__link-text">ОПИСАНИЕ</span>
+
+							</a>
 						</li>
 	
 						<li class="info__filter-item">
-							<button class="info__filter-btn">ХАРАКТЕРИСТИКИ</button>
-						</li>
+							<a class="info__link" href="#tabs-2">
+								<span class="info__link-text">ХАРАКТЕРИСТИКИ</span>
+							</a>
+						</li> 
 	
 						<li class="info__filter-item">
-							<button class="info__filter-btn">ОТЗЫВЫ (2)</button>
+							<a class="info__link" href="#tabs-3">
+								<span class="info__link-text">ОТЗЫВЫ (2)</span>
+							</a>
 						</li>
 					</ul>
-	
-					<div class="info__descr descr">
-						<p class="descr__text">
-							Питахайя – это источник питательных веществ и витаминов. Содержит витамин С, который способствует укреплению иммунной системы. В составе питайи много клетчатки, она благотворно влияет на работу ЖКТ. Оказывает противовоспалительное действие, так как фрукт богат антиоксидантами. При употреблении питахайи, понижается уровень сахара в крови, улучшается зрение и работа сердечно–сосудистой системы. Так как фрукт низкокалорийный и состоит на 90% из воды, способствует снижению веса.
-	
-							Витамины: С, Е, РР, витамины группы В
-	
-							Микроэлементы: железо, калий, кальций, магний, фосфор
-	
-							Внешний вид товара может отличаться от изображений, представленных на сайте
-						</p>
-					</div>
-
-					<div class="info__characteristics characteristics">
-						<ul class
-						="characteristics__list">
-							<li class="characteristics__item">
-								<span class="characteristics__bold">Вес:</span>250-350 г;
-							</li>
-
-							<li class="characteristics__item">
-								<span class="characteristics__bold">Калорийность (на 100г):</span> 50 ккал;
-							</li>
-
-							<li class="characteristics__item">
-								<span class="characteristics__bold">Условия хранения:</span> температура от +3 до +8;
-							</li>
-
-							<li class="characteristics__item">
-								<span class="characteristics__bold">Другие названия:</span> Драконов фрукт, Глаз дракона;
-							</li>
-
-							<li class="characteristics__item">
-								<span class="characteristics__bold">Страна происхождения:</span> Вьетнам;
-							</li>
-
-							<li class="characteristics__item">
-								<span class="characteristics__bold">Срок хранения:</span> до 5 дней.
-							</li>
-						</ul>
-					</div>
-
 					
+					<ul class="info__tabs tabs">
+						<li class="tabs__item tabs__item--active" id="tabs-1">
+							<div class="tabs__descr-box">
+								<p class="tabs__descr-text">
+									Питахайя – это источник питательных веществ и витаминов. Содержит витамин С, который способствует укреплению иммунной системы. В составе питайи много клетчатки, она благотворно влияет на работу ЖКТ. Оказывает противовоспалительное действие, так как фрукт богат антиоксидантами. При употреблении питахайи, понижается уровень сахара в крови, улучшается зрение и работа сердечно–сосудистой системы. Так как фрукт низкокалорийный и состоит на 90% из воды, способствует снижению веса.
+
+								</p>
+		
+								<span class="tabs__descr-item">Витамины: С, Е, РР, витамины группы В</span>
+								<span class="tabs__descr-item">Микроэлементы: железо, калий, кальций, магний, фосфор</span>
+								<span class="tabs__descr-item">Внешний вид товара может отличаться от изображений, представленных на сайте</span>
+							</div>
+						</li>
+
+						<li class="tabs__item" id="tabs-2">
+							<ul class="tabs__character-list">
+								<li class="tabs__character-item">
+									<span class="tabs__character-bold">Вес:</span> 250-350 г;
+								</li>
+
+								<li class="tabs__character-item">
+									<span class="tabs__character-bold">Калорийность (на 100г):</span> 50 ккал;
+								</li>
+
+								<li class="tabs__character-item">
+									<span class="tabs__character-bold">Условия хранения:</span> температура от +3 до +8;
+								</li>
+
+								<li class="tabs__character-item">
+									<span class="tabs__character-bold">Другие названия:</span> Драконов фрукт, Глаз дракона;
+								</li>
+
+								<li class="tabs__character-item">
+									<span class="tabs__character-bold">Страна происхождения:</span> Вьетнам;
+								</li>
+
+								<li class="tabs__character-item">
+									<span class="tabs__character-bold">Срок хранения:</span> до 5 дней.
+								</li>
+							</ul>
+						</li> 
+
+						<li class="tabs__item" id="tabs-3">
+							<div class="tabs__wrapper">
+								<span class="tabs__reviews-text">
+									МНЕНИЯ НАШИХ КЛИЕНТОВ
+								</span>
+
+								<ul class="tabs__comments comments">
+									<li class="comments__item">
+										<div class="comments__top">
+											<img class="comments__img" src="images/uknow.png" alt="аватар">
+											<div class="comments__name-box">
+												<span class="comments__name">Андрей</span>
+												<time class="comments__date">10.06.2021</time>
+											</div>
+											<div class="comments__star star"></div>
+										</div>
+
+										<div class="comments__bottom">
+											<p class="comments__text">
+												Яркий цвет, нежный вкус. Очень свежий и приятный, буду пробовать еще!))
+											</p>
+										</div>
+									</li>
+
+									<li class="comments__item">
+										<div class="comments__top">
+											<img class="comments__img" src="images/uknow.png" alt="аватар">
+											<div class="comments__name-box">
+												<span class="comments__name">Екатерина Белая</span>
+												<time class="comments__date">7.06.2021</time>
+											</div>
+											<div class="comments__star star"></div>
+										</div>
+
+										<div class="comments__bottom">
+											<p class="comments__text">
+												Цвет, конечно, очень насыщенный! Ожидаешь, что и вкус будет такой же яркий (просто взрыв), но нет. Вкус "сдержанно-сладкий" и очень-очень свежий! Рад, что есть такая возможность - пробовать экзотические фрукты.
+											</p>
+										</div>
+									</li>
+								</ul>
+
+								<span class="tabs__reviews-text">
+									ОСТАВИТЬ ОТЗЫВ
+								</span>
+
+								<div class="tabs__grade-box">
+									<span class="tabs__grade">Ваша оценка *</span>
+									<div class="tabs__star star" data-rateyo-rating="3"></div>
+								</div>
+
+								<form class="tabs__form form-tabs" action="">
+									<fieldset class="form-tabs__textarea-box">
+										<label class="form-tabs__label" for="review">Ваш отзыв *
+										</label>
+										<textarea class="form-tabs__textarea" name="" id="review" placeholder="Введите текст отзыва"></textarea>
+									</fieldset>
+
+									<fieldset class="form-tabs__inputs">
+										<label  class="form-tabs__label" for="firstname">Имя</label>
+										<input class="form-tabs__input" placeholder="Введите ваше имя" type="text" id="firstname" required>
+
+
+										<label  class="form-tabs__label" for="email">Email *</label>
+
+										<input class="form-tabs__input" placeholder="youremail@mail.com" type="email" id="email" required>
+									</fieldset>
+								</form>
+
+								<form class="tabs__checkbox-inner" action="">
+
+									<label class="tabs__checkbox-label" for="tabs-checkbox">
+									<span class="tabs__checkbox-text">
+										Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих комментариев.
+									</span> 
+
+										<input class="tabs__checkbox-input" type="checkbox" id="tabs-checkbox">
+										<span class="tabs__checkbox">
+											<span class="sr-only">Соглашение</span>
+										</span>
+									</label>
+								</form>
+
+								<button class="tabs__button btn">Оставить отзыв</button>
+							</div>
+						</li>
+					</ul>
 				</div>
 				
 
+			</section>
+
+			<section class="offers-slider">
+				<div class="offers-slider__container container">
+					<h2 class="offers-slider__title">
+						ВАС МОЖЕТ ЗАИНТЕРЕСОВАТЬ
+					</h2>
+
+					<ul class="offers-slider__content">
+						<li class="offers-slider__item">
+							<article class="offers-slider__card product-card">
+								<ul class="offers-slider__badges badges">
+									<li class="badges__item badges__item--new">Новинка</li>
+									<li class="badges__item badges__item--sale">50%</li>
+									<li class="badges__item badges__item--on  badges__item--hit">Хит</li>
+								</ul>
+
+							<button class="product-card__favorite">
+								<span class="sr-only">Добавить в избранное</span>
+							</button>
+
+							<a class="product-card__image-box" href="#">
+								<img class="product-card__img" src="images/carrot .png" alt="Морковь"
+									width="300" height="215">
+							</a>
+
+							<div class="product-card__info">
+								
+								<div class="product-card__items">
+									<ul class="shop__existence">
+										<li class='product-card__stock'>В НАЛИЧИИ</li>
+										<li class='product-card__stock   product-card__stock--close'>ЗАКАНЧИВАЕТСЯ</li>
+										<li class='product-card__stock'>НЕТ В НАЛИЧИИ</li>
+									</ul>
+
+									<span class="product-card__rating">
+										4.5
+									</span>
+								</div>
+
+								<h3 class="product-card__title">
+									<a class="product-card__name" href="#">Морковь молодая с бабушкиной грядки,
+										1кг</a>
+								</h3>
+
+								<div class="product-card__bottom">
+									<ul class="product-card__prices prices">
+										<li class="prices__item">49 <span class="prices__currency">₽</span>
+										</li>
+									</ul>
+
+									<button class="product-card__cart" type="button">
+										<span class="sr-only">
+											добавить в корзину
+										</span>
+									</button>
+								</div>
+							</div>
+							</article>
+						</li>
+						
+						<li class="offers-slider__item">
+							<article class="offers-slider__card product-card">
+								<ul class="product-card__badges badges">
+									<li class="badges__item badges__item--new">Новинка</li>
+									<li class="badges__item badges__item--on badges__item--sale">30%</li>
+									<li class="badges__item badges__item--hit">Хит</li>
+								</ul>
+
+							<button class="product-card__favorite">
+								<span class="sr-only">Добавить в избранное</span>
+							</button>
+
+							<a class="product-card__image-box" href="#">
+								<img class="product-card__img" src="images/juice.png" alt="Sanpellegrino"
+									height="215">
+							</a>
+
+							<div class="product-card__info">
+								
+								<div class="product-card__items">
+									<ul class="offers-slider__existence">
+										<li class='product-card__stock'>В НАЛИЧИИ</li>
+										<li class='product-card__stock product-card__stock--close'>ЗАКАНЧИВАЕТСЯ</li>
+										<li class='product-card__stock'>НЕТ В НАЛИЧИИ</li>
+									</ul>
+
+									<span class="product-card__rating">
+										4.5
+									</span>
+								</div>
+								
+								<h3 class="product-card__title">
+									<a class="product-card__name" href="#">Напиток сокосодержащий Sanpellegrino
+										Aranciata Orange Красный апельсин безалкогольный</a>
+								</h3>
+
+								<div class="product-card__bottom">
+									<ul class="product-card__prices prices">
+										<li class="prices__item prices__item--old prices__item--old-on">299
+											<span class="prices__currency">₽</span></li>
+
+										<li class="prices__item">199 <span class="prices__currency">₽</span>
+										</li>
+									</ul>
+
+									<button class="product-card__cart" type="button">
+										<span class="sr-only">
+											добавить в корзину
+										</span>
+									</button>
+								</div>
+							</div>
+							</article>
+						</li>
+						<li class="offers-slider__item">
+							<article class="offers-slider__card product-card">
+								<ul class="product-card__badges badges">
+									<li class="badges__item badges__item--on badges__item--new">Новинка</li>
+									<li class="badges__item badges__item--sale">50%</li>
+									<li class="badges__item badges__item--hit">Хит</li>
+								</ul>
+
+							<button class="product-card__favorite">
+								<span class="sr-only">Добавить в избранное</span>
+							</button>
+
+							<a class="product-card__image-box" href="#">
+								<img class="product-card__img" src="images/coffe.png" alt="Кофе " width="300"
+									height="215">
+							</a>
+
+							<div class="product-card__info">
+								
+								<div class="product-card__items">
+									<ul class="shop__existence">
+										<li class='product-card__stock'>В НАЛИЧИИ</li>
+										<li class='product-card__stock product-card__stock--close'>ЗАКАНЧИВАЕТСЯ</li>
+										<li class='product-card__stock'>НЕТ В НАЛИЧИИ</li>
+									</ul>
+
+									<span class="product-card__rating">
+										4.5
+									</span>
+								</div>
+
+								<h3 class="product-card__title">
+									<a class="product-card__name" href="#">Кофе с коноплей органический Caffé
+										Salomoni 250г</a>
+								</h3>
+
+								<div class="product-card__bottom">
+									<ul class="product-card__prices prices">
+
+										<li class="prices__item">877 <span class="prices__currency">₽</span>
+										</li>
+									</ul>
+
+									<button class="product-card__cart" type="button">
+										<span class="sr-only">
+											добавить в корзину
+										</span>
+									</button>
+								</div>
+							</div>
+							</article>
+						</li>
+						
+						<li class="offers-slider__item">
+							<article class="offers-slider__card product-card">
+								<ul class="product-card__badges badges">
+									<li class="badges__item badges__item--on badges__item--new">Новинка</li>
+									<li class="badges__item badges__item--sale">50%</li>
+									<li class="badges__item badges__item--hit">Хит</li>
+								</ul>
+
+							<button class="product-card__favorite">
+								<span class="sr-only">Добавить в избранное</span>
+							</button>
+
+							<a class="product-card__image-box" href="#">
+								<img class="product-card__img" src="images/coffe.png" alt="Кофе " width="300"
+									height="215">
+							</a>
+
+							<div class="product-card__info">
+								
+								<div class="product-card__items">
+									<ul class="shop__existence">
+										<li class='product-card__stock'>В НАЛИЧИИ</li>
+										<li class='product-card__stock product-card__stock--close'>ЗАКАНЧИВАЕТСЯ</li>
+										<li class='product-card__stock'>НЕТ В НАЛИЧИИ</li>
+									</ul>
+
+									<span class="product-card__rating">
+										4.5
+									</span>
+								</div>
+
+								<h3 class="product-card__title">
+									<a class="product-card__name" href="#">Кофе с коноплей органический Caffé
+										Salomoni 250г</a>
+								</h3>
+
+								<div class="product-card__bottom">
+									<ul class="product-card__prices prices">
+
+										<li class="prices__item">877 <span class="prices__currency">₽</span>
+										</li>
+									</ul>
+
+									<button class="product-card__cart" type="button">
+										<span class="sr-only">
+											добавить в корзину
+										</span>
+									</button>
+								</div>
+							</div>
+							</article>
+						</li>
+						
+						<li class="offers-slider__item">
+							<article class="offers-slider__card product-card">
+								<ul class="offers-slider__badges badges">
+									<li class="badges__item badges__item--new">Новинка</li>
+									<li class="badges__item badges__item--sale">50%</li>
+									<li class="badges__item badges__item--on  badges__item--hit">Хит</li>
+								</ul>
+
+							<button class="product-card__favorite">
+								<span class="sr-only">Добавить в избранное</span>
+							</button>
+
+							<a class="product-card__image-box" href="#">
+								<img class="product-card__img" src="images/life-juice.jpg" alt="Напиток" width="300"
+									height="215">
+							</a>
+
+							<div class="product-card__info">
+								
+								<div class="product-card__items">
+									<ul class="offers-slider__existence">
+										<li class='product-card__stock product-card__stock--present'>В НАЛИЧИИ</li>
+										<li class='product-card__stock'>ЗАКАНЧИВАЕТСЯ</li>
+										<li class='product-card__stock'>НЕТ В НАЛИЧИИ</li>
+									</ul>
+
+									<span class="product-card__rating">
+										3.5
+									</span>
+								</div>
+
+								<h3 class="product-card__title">
+									<a class="product-card__name" href="#">Напиток LIFELINE Intellectual со вкусом арбуза и яблока Фонте Аква 0.5 л</a>
+								</h3>
+
+								<div class="product-card__bottom">
+									<ul class="product-card__prices prices">
+										<li class="prices__item prices__item--old prices__item--old-on">149
+											<span class="prices__currency">₽</span></li>
+
+										<li class="prices__item">99 <span class="prices__currency">₽</span>
+										</li>
+									</ul>
+
+									<button class="product-card__cart" type="button">
+										<span class="sr-only">
+											добавить в корзину
+										</span>
+									</button>
+								</div>
+							</div>
+							</article>
+						</li>
+						<li class="offers-slider__item">
+							<article class="offers-slider__card product-card">
+								<ul class="offers-slider__badges badges">
+									<li class="badges__item badges__item--new">Новинка</li>
+									<li class="badges__item badges__item--sale">50%</li>
+									<li class="badges__item badges__item--on  badges__item--hit">Хит</li>
+								</ul>
+
+							<button class="product-card__favorite">
+								<span class="sr-only">Добавить в избранное</span>
+							</button>
+
+							<a class="product-card__image-box" href="#">
+								<img class="product-card__img" src="images/life-juice.jpg" alt="Напиток" width="300"
+									height="215">
+							</a>
+
+							<div class="product-card__info">
+								
+								<div class="product-card__items">
+									<ul class="offers-slider__existence">
+										<li class='product-card__stock product-card__stock--present'>В НАЛИЧИИ</li>
+										<li class='product-card__stock'>ЗАКАНЧИВАЕТСЯ</li>
+										<li class='product-card__stock'>НЕТ В НАЛИЧИИ</li>
+									</ul>
+
+									<span class="product-card__rating">
+										3.5
+									</span>
+								</div>
+
+								<h3 class="product-card__title">
+									<a class="product-card__name" href="#">Напиток LIFELINE Intellectual со вкусом арбуза и яблока Фонте Аква 0.5 л</a>
+								</h3>
+
+								<div class="product-card__bottom">
+									<ul class="product-card__prices prices">
+										<li class="prices__item prices__item--old prices__item--old-on">149
+											<span class="prices__currency">₽</span></li>
+
+										<li class="prices__item">99 <span class="prices__currency">₽</span>
+										</li>
+									</ul>
+
+									<button class="product-card__cart" type="button">
+										<span class="sr-only">
+											добавить в корзину
+										</span>
+									</button>
+								</div>
+							</div>
+							</article>
+						</li>
+						<li class="offers-slider__item">
+							<article class="offers-slider__card product-card">
+								<ul class="offers-slider__badges badges">
+									<li class="badges__item badges__item--new">Новинка</li>
+									<li class="badges__item badges__item--sale">50%</li>
+									<li class="badges__item badges__item--on  badges__item--hit">Хит</li>
+								</ul>
+
+							<button class="product-card__favorite">
+								<span class="sr-only">Добавить в избранное</span>
+							</button>
+
+							<a class="product-card__image-box" href="#">
+								<img class="product-card__img" src="images/life-juice.jpg" alt="Напиток" width="300"
+									height="215">
+							</a>
+
+							<div class="product-card__info">
+								
+								<div class="product-card__items">
+									<ul class="offers-slider__existence">
+										<li class='product-card__stock product-card__stock--present'>В НАЛИЧИИ</li>
+										<li class='product-card__stock'>ЗАКАНЧИВАЕТСЯ</li>
+										<li class='product-card__stock'>НЕТ В НАЛИЧИИ</li>
+									</ul>
+
+									<span class="product-card__rating">
+										3.5
+									</span>
+								</div>
+
+								<h3 class="product-card__title">
+									<a class="product-card__name" href="#">Напиток LIFELINE Intellectual со вкусом арбуза и яблока Фонте Аква 0.5 л</a>
+								</h3>
+
+								<div class="product-card__bottom">
+									<ul class="product-card__prices prices">
+										<li class="prices__item prices__item--old prices__item--old-on">149
+											<span class="prices__currency">₽</span></li>
+
+										<li class="prices__item">99 <span class="prices__currency">₽</span>
+										</li>
+									</ul>
+
+									<button class="product-card__cart" type="button">
+										<span class="sr-only">
+											добавить в корзину
+										</span>
+									</button>
+								</div>
+							</div>
+							</article>
+						</li>
+						<li class="offers-slider__item">
+							<article class="offers-slider__card product-card">
+								<ul class="offers-slider__badges badges">
+									<li class="badges__item badges__item--new">Новинка</li>
+									<li class="badges__item badges__item--sale">50%</li>
+									<li class="badges__item badges__item--on  badges__item--hit">Хит</li>
+								</ul>
+
+							<button class="product-card__favorite">
+								<span class="sr-only">Добавить в избранное</span>
+							</button>
+
+							<a class="product-card__image-box" href="#">
+								<img class="product-card__img" src="images/life-juice.jpg" alt="Напиток" width="300"
+									height="215">
+							</a>
+
+							<div class="product-card__info">
+								
+								<div class="product-card__items">
+									<ul class="offers-slider__existence">
+										<li class='product-card__stock product-card__stock--present'>В НАЛИЧИИ</li>
+										<li class='product-card__stock'>ЗАКАНЧИВАЕТСЯ</li>
+										<li class='product-card__stock'>НЕТ В НАЛИЧИИ</li>
+									</ul>
+
+									<span class="product-card__rating">
+										3.5
+									</span>
+								</div>
+
+								<h3 class="product-card__title">
+									<a class="product-card__name" href="#">Напиток LIFELINE Intellectual со вкусом арбуза и яблока Фонте Аква 0.5 л</a>
+								</h3>
+
+								<div class="product-card__bottom">
+									<ul class="product-card__prices prices">
+										<li class="prices__item prices__item--old prices__item--old-on">149
+											<span class="prices__currency">₽</span></li>
+
+										<li class="prices__item">99 <span class="prices__currency">₽</span>
+										</li>
+									</ul>
+
+									<button class="product-card__cart" type="button">
+										<span class="sr-only">
+											добавить в корзину
+										</span>
+									</button>
+								</div>
+							</div>
+							</article>
+						</li>
+					</ul>
+					
+				</div>
 			</section>
 
 		</main>
@@ -605,8 +1135,6 @@
 	
 	
 	<script src="js/main.min.js"></script>
-	<!-- <script src="../node_modules/mixitup/dist/mixitup.min.js"></script>
-	<script src="../node_modules/slick-carousel/slick/slick.min.js"></script> -->
 </body>
 
 </html>
