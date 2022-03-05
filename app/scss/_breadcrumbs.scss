@@ -1,0 +1,42 @@
+.breadcrumbs {
+	padding: 24px 0;
+	background-color: $silver-100;
+	color: $dark-800;
+	&__list {
+		display: flex;
+
+	}
+
+	&__item {
+		padding-right: 16px;
+		position: relative;
+		&::after {
+			content: '';
+			position: absolute;
+			background-image: url('../images/icons/icon-angel-breadcrumbs.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			width: 6px;
+			height: 10px;
+			top: 5px;
+			right: 4px;
+			
+		}
+
+		&:last-child {
+			padding-right: 0;
+
+			&::after {
+				display: none;
+			}
+		}
+	}
+
+	&__link {
+
+	}
+
+  }
+  
+  

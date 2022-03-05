@@ -23,7 +23,7 @@
 	&__list {
 		text-align: left;
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: 1fr 1fr 1fr 1fr;
 		grid-gap: 30px;
 		margin-bottom: 48px;
 
@@ -31,6 +31,11 @@
 			display: grid;
 			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 			grid-gap: 15px;
+		}
+
+		@include media-1200 {
+			grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
 		}
 
 		@include media-768 {
@@ -73,40 +78,11 @@
 			padding: 0;
 		}
 
-		&__title {
-			flex: none;
-			max-height: 67px;
-			height: 100%;
-		}
-
 		&__name {
 			font-weight: 600;
 			font-size: 14px;
 			margin-bottom: 0;
 			@include line-clamp(3);
-		}
-
-		&__stock {
-			font-weight: 600;
-			font-size: 10px;
-			line-height: 1;
-			display: none;
-			letter-spacing: 0;
-
-			&--present {
-				display: block;
-				color: $green-900;
-			}
-
-			&--close {
-				display: block;
-				color: $red-900;
-			}
-
-			&--no {
-				display: block;
-				color: $silver-600;
-			}
 		}
 
 		&__bottom {
@@ -135,28 +111,28 @@
 			}
 		}
 
-		&__rating {
-			font-weight: 700;
-			font-size: 14px;
-			line-height: 1;
-			padding-right: 18px;
-			position: relative;
+		// &__rating {
+		// 	font-weight: 700;
+		// 	font-size: 14px;
+		// 	line-height: 1;
+		// 	padding-right: 18px;
+		// 	position: relative;
 
-			&::after {
-				content: "";
-				position: absolute;
-				display: block;
-				background-color: $yellow-900;
-				mask-image: url("../../images/sprite.svg#icon-star");
-				mask-repeat: no-repeat;
-				mask-size: cover;
-				mask-position: center;
-				width: 16px;
-				height: 16px;
-				top: -1px;
-				right: 1px;
-			}
-		}
+		// 	&::after {
+		// 		content: "";
+		// 		position: absolute;
+		// 		display: block;
+		// 		background-color: $yellow-900;
+		// 		mask-image: url("../../images/sprite.svg#icon-star");
+		// 		mask-repeat: no-repeat;
+		// 		mask-size: cover;
+		// 		mask-position: center;
+		// 		width: 16px;
+		// 		height: 16px;
+		// 		top: -1px;
+		// 		right: 1px;
+		// 	}
+		// }
 	}
 
 	.filters {

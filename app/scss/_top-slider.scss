@@ -16,11 +16,6 @@
 			padding: 0;
 		}
 
-		@include media-768 {
-		}
-
-		@include media-576 {
-		}
 	}
 
 	&__item {
@@ -139,7 +134,10 @@
 
 		@include media-992 {
 			z-index: -4;
+			width: 0;
+			height: 0;
 		}
+
 
 		&::before {
 			content: "";
@@ -153,6 +151,11 @@
 			height: 32px;
 			top: 15.5px;
 			transition: background-color 0.3s;
+
+			@include media-992 {
+				width: 0;
+				height: 0;
+			}
 		}
 
 		&--prev {

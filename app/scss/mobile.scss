@@ -10,7 +10,9 @@
 	font-size: 18px;
 	transform: translateX(-200%);
 	transition: transform 0.3s;
-	overflow: hidden;
+	// overflow: hidden;
+	height: 100vh;
+	overflow-y: auto;
 	@include media-992 {
 		&--open {
 			transform: translateX(0%);

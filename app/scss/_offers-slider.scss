@@ -1,0 +1,118 @@
+.offers-slider {
+	padding-bottom: 46px;
+
+	&__container {
+		// padding: 0;
+	}
+
+	&__title {
+		font-family: 'Ruda',sans-serif;
+		font-weight: 600;
+		font-size: 30px;
+		line-height: 1.2;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+		margin-bottom: 60px;
+	}
+
+	&__content {
+		position: relative;
+	}
+
+	&__item {
+		// padding: 0 12px;
+	}
+
+	&__card {}
+	&__existence {}
+
+	&__btn{
+		position: absolute;
+		width: 60px;
+		height: 60px;
+		border: 1px solid $silver-600;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 6px;
+		&::before {
+			content: '';
+			background-color: #31352B;
+			// position: absolute;
+			display: block;
+			mask-repeat: no-repeat;
+			mask-size: cover;
+			mask-position: center;
+			width: 59px;
+			height: 32px;
+			// top: 15.5px;
+			transition: background-color 0.3s;
+		}
+
+		&--prev {
+			top: -108px;
+			right: 91px;
+			
+			&::before {
+				background-image: url('../images/sprite.svg#');
+				mask-image: url("../images/sprite.svg#icon-butt-arrow");
+				transform: rotate(180deg);
+			}
+
+		}
+
+		&--next {
+			top: -108px;
+			right: 1px;
+
+			&::before {
+				background-image: url('../images/sprite.svg#');
+				mask-image: url("../images/sprite.svg#icon-butt-arrow");
+				
+			}
+		}
+
+	}
+	.product-card {
+		max-width: 300px;
+		width: 100%;
+		min-height: 409px;
+		margin: 0 auto;
+	  &__badges {}
+	  &__favorite {}
+	  &__image-box {}
+	  &__img {}
+	  &__info {
+		  padding: 0 18px 18px;
+	  }
+	  &__items {
+		display: flex;
+		justify-content: space-between;
+	  }
+
+	  &__stock {}
+	  &__stock--present {}
+	  &__rating {}
+	  &__title {}
+	  &__name {
+		  margin-bottom: 0;
+	  }
+	  &__bottom {}
+	  &__prices {}
+	  &__cart {}
+	}
+  }
+  .badges {
+	&__item {}
+	&__item--on {}
+	&__item--new {}
+	&__item--sale {}
+	&__item--hit {}
+  }
+  .prices {
+	&__item {}
+	&__item--old {}
+	&__item--old-on {}
+	&__currency {}
+  }
+  

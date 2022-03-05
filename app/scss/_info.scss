@@ -1,0 +1,259 @@
+.info {
+	border-top:1px solid $silver-600;
+	padding-bottom: 82px;
+	padding-top: 18px;
+	
+	&__filter {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 45px;
+	}
+
+	&__filter-item {
+		margin-right: 145px;
+		display: flex;
+		align-items: center;
+		// justify-content: center;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__link {
+		&--light {
+			position: relative;
+			color: $green-900;
+
+			&::before {
+				content: '';
+				position: absolute;
+				background-color: $green-900;
+				width: 100%;
+				height: 2px;
+				top: -17px;
+			}
+		}
+	}
+
+	&__link-text{
+		font-family: 'Ruda';
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 1.8;
+		text-transform: uppercase;
+		letter-spacing: 0;
+	}
+	&__tabs {}
+  }
+  .container {
+  }
+  .tabs {
+	  
+	&__item {
+		display: none;
+		color: $dark-500;
+	}
+
+	&__item.tabs__item--active {
+		display: block;
+	}
+	
+	&__descr-box {
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		color: #4F4F4F;
+		max-width: 690px;
+		width: 100%;
+	}	
+	
+	&__descr-text{
+		max-width: 725px;
+		width: 100%;
+		margin-bottom: 25px;
+		font-size: 16px;
+		line-height: 1.6;
+		letter-spacing: 0;
+	}
+
+	&__descr-item {
+		margin-bottom: 28px;
+		font-size: 16px;
+		line-height: 1.6;
+		letter-spacing: 0;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__character-list {
+		margin: 0 auto;
+		max-width: 690px;
+	}
+
+	&__character-item {
+		margin-bottom: 10px;
+		font-size: 16px;
+		line-height: 1.6;
+	}
+
+	&__character-bold {
+		font-weight: 700;
+	}
+
+	&__reviews-text {}
+	&__comments {}
+  }
+
+  .tabs {
+	&__wrapper {
+		margin: 0 auto;
+		max-width: 687px;
+		width: 100%;
+	}
+	&__reviews-text {
+		display: inline-block;
+		font-family:'Ruda', sans-serif;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 1.2;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+		color: $dark-900;
+		margin-bottom: 48px;
+	}
+	&__comments {}
+
+	&__grade-box {
+		display: flex;
+		margin-bottom: 15px;
+	}
+
+	&__grade {
+		font-size: 16px;
+		line-height: 1.3;
+	}
+	&__star {}
+	&__form {}
+	&__checkbox-inner {
+		position: relative;
+		margin-bottom: 24px;
+	}
+
+	&__checkbox-input {
+		appearance: none;
+		position: absolute;
+
+		&:checked+.tabs__checkbox{
+			background-image: url("../images/icons/icon-check-on.svg");
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	}
+
+
+	&__checkbox {
+		position: absolute;
+		box-shadow: 0 0 0 1px $silver-600;
+		border-radius: 2px;
+		width: 23px;
+		height: 23px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		cursor: pointer;
+	}
+	&__checkbox-text {
+		display: block;
+		padding-left:  36px;
+
+
+	}
+	&__button {}
+  }
+  .comments {
+	margin-bottom: 72px;
+	&__item {}
+	&__top {
+		display: flex;
+		align-items: center;
+		margin-bottom: 24px;
+	}
+	&__img {
+		border-radius: 50%;
+		margin-right: 24px;
+	}
+	&__name-box {
+		display: flex;
+		flex-direction: column;
+		font-size: 14px;
+		line-height: 1.3;
+		margin-right: auto;
+	}
+	&__name {
+		font-weight: bold;
+		color: $dark-900;
+		margin-bottom: 4px;
+	}
+	&__date {}
+	&__star {
+	
+	}
+	&__bottom {}
+	&__text {}
+  }
+
+  .form-tabs {
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: flex-start;
+	  margin-bottom: 24px;
+	  
+	&__textarea-box {
+		margin-right: 30px;
+	}
+	  
+	&__label {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 12px;
+	}
+	&__textarea {
+		border: 1px solid $silver-600;
+		border-radius: 6px;
+		width: 400px;
+		min-height: 165px;
+		padding: 18px;
+		&::placeholder {
+			font-size: 14px;
+			line-height: 1.3;
+			color: $silver-600;
+		}
+	}
+	&__inputs {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+	}
+	&__input {
+		border: 1px solid $silver-600;
+		border-radius: 6px;
+		padding: 17px 115px 17px 18px;
+
+		margin-bottom: 24px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&::placeholder {
+			font-size: 14px;
+			line-height: 1.3;
+			color: $silver-600;
+		}
+	}
+  }
+
+
+  
