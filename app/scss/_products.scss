@@ -1,23 +1,36 @@
 .products {
 	padding: 48px 0 63px;
 
+	@include media-992 {
+		padding: 30px 0 26px;
+	}
+
 	&__inner {
 		display: flex;
-		
+
+		@include media-992 {
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 
 	&__btn-slide {
 		position: absolute;
 		width: 60px;
 		height: 60px;
-		border: 1px solid $silver-600;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		border-radius: 6px;
+
+		@include media-768 {
+			width: 0;
+			height: 0;
+		}
+
 		&::before {
-			content: '';
-			background-color: #31352B;
+			content: "";
+			background-color: #31352b;
 			// position: absolute;
 			display: block;
 			mask-repeat: no-repeat;
@@ -27,6 +40,11 @@
 			height: 32px;
 			// top: 15.5px;
 			transition: background-color 0.3s;
+
+			@include media-768 {
+				width: 0;
+				height: 0;
+			}
 		}
 
 		&--prev {
@@ -35,11 +53,10 @@
 			z-index: 10;
 
 			&::before {
-				background-image: url('../images/sprite.svg#');
+				background-image: url("../images/sprite.svg#");
 				mask-image: url("../images/sprite.svg#icon-butt-arrow");
 				transform: rotate(180deg);
 			}
-
 		}
 
 		&--next {
@@ -47,12 +64,10 @@
 			right: 22px;
 
 			&::before {
-				background-image: url('../images/sprite.svg#');
+				background-image: url("../images/sprite.svg#");
 				mask-image: url("../images/sprite.svg#icon-butt-arrow");
-				
 			}
 		}
-
 	}
 
 	&__images-box {
@@ -65,27 +80,54 @@
 		margin-right: 30px;
 		position: relative;
 
-		// .slick-prev{
+		@include media-992 {
+			margin-right: 0;
+			margin-bottom: 30px;
+		}
+
+		@include media-576 {
+			padding: 20px 36px 12px;
+
 			
-		// }
-
-		// .slick-next {
-
-		// }
+		}
 	}
 
 	&__info {
 		padding-top: 21px;
+
+		@include media-992 {
+			max-width: 630px;
+			width: 100%;
+			padding-top: 0px;
+		}
 	}
 
 	&__name {
-		font-family: 'Ruda', sans-serif;
+		font-family: "Ruda", sans-serif;
 		font-style: normal;
 		font-weight: 600;
 		font-size: 32px;
 		line-height: 1.2;
 		letter-spacing: 0.03em;
 		margin-bottom: 18px;
+
+		&--response {
+			display: none;
+		}
+
+		@include media-992 {
+			display: none;
+			margin-bottom: 0;
+
+			&--response {
+				display: block;
+				margin-bottom: 30px;
+			}
+		}
+
+		@include media-768 {
+			font-size: 26px;
+		}
 	}
 
 	.badges {
@@ -103,9 +145,15 @@
 		display: flex;
 		align-items: center;
 		margin-bottom: 30px;
+		flex-wrap: wrap;
+
+
+
+		@include media-992 {
+			margin-bottom: 27px;
+		}
 	}
 	&__code {
-		
 		font-size: 14px;
 		line-height: 1.2;
 		letter-spacing: 0.03em;
@@ -115,22 +163,36 @@
 		border-radius: 6px;
 		margin-right: 11px;
 	}
+
 	&__star {
-		margin-right: 309px;
+		margin-right: auto;
+
+		@include media-576 {
+			margin-right: 0;
+		}
 	}
+
 	&__text {
 		font-weight: 600;
 		font-size: 16px;
 		line-height: 1;
 		letter-spacing: 0.03em;
 		color: $green-900;
-		
+
+		@include media-576 {
+			padding-top: 18px;
+			padding-right: 30px;
+		}
 	}
 
 	&__price {
 		display: flex;
 		align-items: flex-end;
 		margin-bottom: 60px;
+
+		@include media-576 {
+			margin-bottom: 30px;
+		}
 	}
 
 	&__price-num {
@@ -146,7 +208,7 @@
 				position: absolute;
 				width: 100%;
 				height: 2px;
-				background-color: #C1C1C1;
+				background-color: #c1c1c1;
 				transform: rotate(-14deg);
 				top: 50%;
 			}
@@ -156,13 +218,10 @@
 			color: $green-900;
 			font-size: 30px;
 		}
-
 	}
-	
+}
 
-  }
-
-  .interactive {
+.interactive {
 	display: flex;
 	margin-bottom: 32px;
 
@@ -180,11 +239,16 @@
 		align-self: flex-start;
 		height: 44px;
 		margin-right: auto;
+
+		@include media-1200 {
+			font-size: 0;
+			padding: 0 12px 0 27px;
+		}
 		&::before {
-			content: '';
+			content: "";
 			position: absolute;
 			display: block;
-			background-image: url('../images/sprite.svg#icon-cart');
+			background-image: url("../images/sprite.svg#icon-cart");
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-position: center;
@@ -194,15 +258,16 @@
 			left: 12px;
 		}
 	}
+
 	&__favorite {
 		width: 44px;
 		height: 44px;
 
 		&::before {
-			content: '';
+			content: "";
 			display: block;
 			background-color: $silver-600;
-			mask-image: url('../images/sprite.svg#icon-product-heart');
+			mask-image: url("../images/sprite.svg#icon-product-heart");
 			mask-repeat: no-repeat;
 			mask-size: cover;
 			mask-position: center;
@@ -211,11 +276,9 @@
 			z-index: 6;
 		}
 	}
-  }
+}
 
- 
- 
-  .rule {
+.rule {
 	&__title {
 		display: block;
 		font-family: "Ruda", sans-serif;
@@ -226,7 +289,7 @@
 		margin-bottom: 18px;
 	}
 	&__list {
-		border-top:1px solid $silver-600;
+		border-top: 1px solid $silver-600;
 		padding: 18px 0;
 	}
 	&__text {
@@ -237,126 +300,24 @@
 	&__link {
 		color: $green-900;
 	}
-  }
+}
 
-  .jq-number{
-	padding: 0;
-	max-width: 158px;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	border-radius: 6px;
-	margin-right: 18px;
-	
-	.interactive {
-		&__counter {
-			text-align: center;
-			font-family: 'Open Sans', sans-serif;
-			padding: 0;
-			font:caption;
-			font-size: 20px;
-			line-height: 1.1;
-		}	
-	}
-
-	&__field {
-		padding: 10px 17px;
-		min-width: 70px;
-		width: 100%;		
-		border-radius: 0;
-		border: none;
-		box-shadow: none;
-		background-color: $green-200;
-	}
-
-	&__spin.minus {
-		left: 0;
-		border-radius: 3px 0px 0px 3px;
-		&::after{
-			content: '';
-			position: absolute;
-			display: block;
-			width: 30px;
-			height: 3px;
-			background-color: $white;
-			top: 21px;
-			left: 7.33px;
-			border: none;
-			border-radius: 1px;
-		}
-
-	}
-
-	&__spin.plus {
-		border-radius:  0px 3px 3px 0px ;
-		&::after{
-			position: absolute;
-			display: block;
-			width: 30px;
-			height: 3px;
-			background-color: $white;
-			top: 21px;
-			left: 7.33px;
-			border: none;
-			
-		}
-
-		&::before {
-			content: '';
-			position: absolute;
-			display: block;
-			width: 30px;
-			height: 3px;
-			background-color: $white;
-			top: 21px;
-			left: 7.33px;
-			transform: rotate(90deg);
-		}
-	}
-
-	&__spin {
-		display: block;
-		width: 44px;
-		height: 44px;
-		border: 0;
-		border-bottom-color:$green-900;
-		background: $green-900;
-		box-shadow: none;
-		&:hover {
-			background: $green-900;
-		}
-
-		&:active {
-			background: $green-900;
-			box-shadow: none;
-		}
-	}
-
-	.focused {
-
-		&:focus {
-			box-shadow: 0;
-		}
-
-		&:active {
-			background-color:none;
-		}
-
-	}
-
-	
-  }
-
-  .jq-number.focused {
-	.jq-number{
-		&__field{
+.jq-number.focused {
+	.jq-number {
+		&__field {
 			border: none;
 		}
 	}
-  } 
+}
 
-  .jq-ry-container {
+.jq-ry-container {
 	padding: 0;
 	padding-top: 2px;
-  }
-  
+}
+
+.fancybox-is-open {
+	.fancybox-bg {
+		background-color: $white;
+		opacity: 1;
+	}
+}

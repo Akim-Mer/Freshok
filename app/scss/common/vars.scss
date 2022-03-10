@@ -33,6 +33,7 @@ $white:     #FFFFFF;
 
 
 $md-1550: 1550;
+$md-1300: 1300;
 $md1: 1200;
 $md2: 992;
 $md3: 768;
@@ -47,6 +48,13 @@ $md4: 576;
 	  @content;
 	 }
   }
+
+
+@mixin media-1300()  {
+@media (max-width: #{$md-1300}px) {
+	@content;
+	}
+}
 
 @mixin media-1200()  {
 	@media (max-width: #{$md1}px) {

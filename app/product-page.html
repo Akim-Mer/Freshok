@@ -167,13 +167,72 @@
 							</a>
 						</li>
 
-						<li class="users__item users__item--basket">
+						<li class="users__item users__item--basket cart__btn">
 							<button class="users__link users__link--cart" type="button">
 								<span class="sr-only">Корзина</span>
 								<span class="users__quantity">12</span>
 							</button>
 						</li>
 					</ul>
+
+					<div class="basket">
+						<div class="basket__content">
+							<div class="basket__top">
+								<div class="basket__top-box">
+									<span class="basket__top-title">Корзина </span>
+									<button class="basket__clean-btn">очистить корзину</button>
+								</div>
+								
+								<button class="basket__close-menu close-menu" type="button">
+									<span class="sr-only">закрыть корзину</span>
+								</button>
+							</div>
+							
+							<div class="basket__bottom">
+								<ul class="basket__list">
+									<li class="basket__item">
+										<article class="basket__card-product card-product">
+											<div class="card-product__product-box">
+
+												<a class="card-product__link" href="#">
+													<img class="card-product__img" src="images/ananas.png" alt="">
+												</a>
+
+												<div class="card-product__text-box">
+													<span class="card-product__name">Ананас, 1 кг</span>
+													<span class="card-product__quantity">999<span
+													class="card-product__currency">₽</span> </span>
+												</div>									
+											</div>
+
+											<div class="card-product__count-box">
+												<form class="card-product__form" action="">
+													<input  class="card-product__counter counter-iter" type="number" value="1" min="1" max="99" >
+												</form>
+
+												<span class="card-product__number">1998<span
+												class="card-product__currency">₽</span> </span>
+											</div>
+											
+											<button  class="card-product__delete-btn close-menu" type="button">
+												<span class="sr-only">удалить товар</span>
+											</button>
+											
+										</article>
+									</li>
+								</ul>
+
+								<div class="basket__sum">
+									<span class="basket__sum-text">Товаров на сумму</span>
+									<span class="basket__sum-num">2038₽ </span>
+								</div>
+		
+								<button class="basket__btn" type="submit">Оформить заказ</button>
+							</div>
+							
+						</div>
+						
+					</div>
 				</div>
 			</div>
 
@@ -185,7 +244,7 @@
 								<img class="mobile__logo" src="images/icons/icon-logo-green.svg" alt="Логотип">
 							</a>
 
-							<button class="mobile__close-menu" type="button">
+							<button class="mobile__close-menu close-menu" type="button">
 								<span class="sr-only">закрыть меню</span>
 							</button>
 						</div>
@@ -326,6 +385,7 @@
 			<section class="products">
 				<div class="products__container container">
 					<div class="products__inner">
+						<h1 class="products__name products__name--response">Питахайя красная с белой мякотью</h1>
 						<ul class="products__images-box" >
 							<li class="products__images-item" >
 								<a class="products__img-link" href="images/pytahaya750.jpg" data-fancybox="images">
@@ -370,7 +430,7 @@
 
 							<div class="products__interactive interactive">
 						
-								<input  class="interactive__counter counter-iter" type="number" value="1" min="1" >
+								<input  class="interactive__counter counter-iter" type="number" value="1" min="1" max="99" >
 								
 								
 								
@@ -516,24 +576,24 @@
 
 								<div class="tabs__grade-box">
 									<span class="tabs__grade">Ваша оценка *</span>
-									<div class="tabs__star star" data-rateyo-rating="3"></div>
+									<div class="tabs__star star" ></div>
 								</div>
 
 								<form class="tabs__form form-tabs" action="">
 									<fieldset class="form-tabs__textarea-box">
 										<label class="form-tabs__label" for="review">Ваш отзыв *
 										</label>
-										<textarea class="form-tabs__textarea" name="" id="review" placeholder="Введите текст отзыва"></textarea>
+										<textarea class="form-tabs__textarea forms" name="" id="review" placeholder="Введите текст отзыва" required></textarea>
 									</fieldset>
 
 									<fieldset class="form-tabs__inputs">
 										<label  class="form-tabs__label" for="firstname">Имя</label>
-										<input class="form-tabs__input" placeholder="Введите ваше имя" type="text" id="firstname" required>
+										<input class="form-tabs__input forms" placeholder="Введите ваше имя" type="text" id="firstname" required>
 
 
 										<label  class="form-tabs__label" for="email">Email *</label>
 
-										<input class="form-tabs__input" placeholder="youremail@mail.com" type="email" id="email" required>
+										<input class="form-tabs__input forms" placeholder="youremail@mail.com" type="email" id="email" required>
 									</fieldset>
 								</form>
 
@@ -565,6 +625,8 @@
 					<h2 class="offers-slider__title">
 						ВАС МОЖЕТ ЗАИНТЕРЕСОВАТЬ
 					</h2>
+				</div>
+				<div class="offers-slider__content-container container">
 
 					<ul class="offers-slider__content">
 						<li class="offers-slider__item">
@@ -589,8 +651,8 @@
 								<div class="product-card__items">
 									<ul class="shop__existence">
 										<li class='product-card__stock'>В НАЛИЧИИ</li>
-										<li class='product-card__stock   product-card__stock--close'>ЗАКАНЧИВАЕТСЯ</li>
-										<li class='product-card__stock'>НЕТ В НАЛИЧИИ</li>
+										<li class='product-card__stock'>ЗАКАНЧИВАЕТСЯ</li>
+										<li class='product-card__stock product-card__stock--no'>НЕТ В НАЛИЧИИ</li>
 									</ul>
 
 									<span class="product-card__rating">
@@ -640,8 +702,8 @@
 								
 								<div class="product-card__items">
 									<ul class="offers-slider__existence">
-										<li class='product-card__stock'>В НАЛИЧИИ</li>
-										<li class='product-card__stock product-card__stock--close'>ЗАКАНЧИВАЕТСЯ</li>
+										<li class='product-card__stock product-card__stock--present'>В НАЛИЧИИ</li>
+										<li class='product-card__stock'>ЗАКАНЧИВАЕТСЯ</li>
 										<li class='product-card__stock'>НЕТ В НАЛИЧИИ</li>
 									</ul>
 
