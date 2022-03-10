@@ -10,7 +10,6 @@
 	font-size: 18px;
 	transform: translateX(-200%);
 	transition: transform 0.3s;
-	// overflow: hidden;
 	height: 100vh;
 	overflow-y: auto;
 	@include media-992 {
@@ -36,14 +35,7 @@
 		margin-bottom: 26px;
 	}
 
-	&__close-menu {
-		background-image: url("../images/icons/icon-close-btn.svg");
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-		width: 18px;
-		height: 18px;
-	}
+	
 	
 	&__account {
 		background-color: $green-900;

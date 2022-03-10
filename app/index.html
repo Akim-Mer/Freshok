@@ -163,17 +163,78 @@
 						<li class="users__item users__item--favourit">
 							<a class="users__link users__link--heart" href="#">
 								<span class="sr-only">Избранное</span>
-								<span class="users__quantity">12</span>
+								<span class="users__quantity">0</span>
 							</a>
 						</li>
 
 						<li class="users__item users__item--basket">
-							<button class="users__link users__link--cart" type="button">
+							<button class="users__link users__link--cart cart__btn" type="button"> <!-- cart-btn-->
 								<span class="sr-only">Корзина</span>
-								<span class="users__quantity">12</span>
+								<span class="users__quantity">0</span>
 							</button>
 						</li>
 					</ul>
+
+					<div class="basket">
+						<div class="basket__content">
+							<div class="basket__top">
+								<div class="basket__top-box">
+									<span class="basket__top-title">Корзина </span>
+									<button class="basket__clean-btn">очистить корзину</button>
+								</div>
+								
+								<button class="basket__close-menu close-menu" type="button">
+									<span class="sr-only">закрыть корзину</span>
+								</button>
+							</div>
+							
+							<div class="basket__bottom">
+								<ul class="basket__list">
+									<li class="basket__item">
+										<article class="basket__card-product card-product">
+											<div class="card-product__product-box">
+
+												<a class="card-product__link" href="#">
+													<img class="card-product__img" src="images/ananas.png" alt="">
+												</a>
+
+												<div class="card-product__text-box">
+													<span class="card-product__name">Ананас, 1 кг</span>
+													<span class="card-product__quantity">999<span
+													class="card-product__currency">₽</span> </span>
+												</div>									
+											</div>
+
+											<div class="card-product__count-box">
+												<form class="card-product__form" action="">
+													<input  class="card-product__counter counter-iter" type="number" value="1" min="1" max="99" >
+												</form>
+
+												<span class="card-product__number">1998<span
+												class="card-product__currency">₽</span> </span>
+											</div>
+											
+											<button  class="card-product__delete-btn close-menu" type="button">
+												<span class="sr-only">удалить товар</span>
+											</button>
+											
+										</article>
+									</li>
+								</ul>
+
+								<div class="basket__sum">
+									<span class="basket__sum-text">Товаров на сумму</span>
+									<span class="basket__sum-num">2038₽ </span>
+								</div>
+		
+								<button class="basket__btn" type="submit">Оформить заказ</button>
+							</div>
+							
+							
+						</div>
+						
+					</div>
+
 				</div>
 			</div>
 
@@ -185,7 +246,7 @@
 								<img class="mobile__logo" src="images/icons/icon-logo-green.svg" alt="Логотип">
 							</a>
 
-							<button class="mobile__close-menu" type="button">
+							<button class="mobile__close-menu close-menu" type="button">
 								<span class="sr-only">закрыть меню</span>
 							</button>
 						</div>
